@@ -1,0 +1,617 @@
+<html>
+ <head>
+  <title>听闻</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+  <script src="js/base.js1"></script>
+  <style type="text/css">
+	table {
+	font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+  </style>
+ </head>
+ <body>
+ <div class="headerBar">
+	<div class="comWidth_650">
+		<div class="logo fl">
+			<span class="icon_title">日 记</span>
+		</div>
+		<div class="searchBox fl">
+			<div class="ui-widget">
+				<input type="text" placeholder="搜索你感兴趣的内容" class="search-text fl" id="tags">
+			</div>
+			<button type="submit" class="zu-top-search-btn">
+				<span class="search-btn"></span>
+			</button>
+		</div>
+	</div>
+	<div class="nav-list fl">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">话题</a></li>
+				<li><a href="Music.html">发现</a></li>
+				<li><a href="Movie_list.html">电影</a></li>
+			</ul>
+		
+	</div>
+	<!--播放器-->
+	<audio controls="controls" class="player"  autoplay="autoplay">
+		<source src="music/南拳妈妈 - 家.mp3" type="audio/ogg">
+		<source src="/i/song.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+
+ </div>
+	<div class="container comWidth">
+		<div class="title">
+			<h2 class="zm-editable-content">经常上知乎会带来什么错觉</h2>
+			<div class="describe">
+				<p>比如你在知乎上感觉Mac才是常用电脑</p>
+			</div>
+		</div>
+		<div class="content">
+			<div class="main">
+				<div class="title">
+					<span class="date">2016年11月23日</span>
+					<span class="weather">天气霾转多云</span>
+				</div>
+				<div class="zb-editable-content">
+					<p>路上已经有很多行人了<br/>早点摊有很多种类的食物<br/>不过我已经没有吃早餐的习惯了<br/>这是一个坏习惯<br/>我应该慢慢去改掉它<br/>我在看逻辑思维<br/>等我看完它<br/>寄给你看<br/><br/></p>
+					<p><img src="imgs/2c364b443330d1c0d0954cc6d5b8b9b7_b.jpg" alt="猫" class="cat" width="393px" height="313px"></p>
+				</div>
+			</div>
+			<div class="main">
+				<div class="title">
+					<span class="date">2016年11月24日</span>
+					<span class="weather">霾转多云</span>
+				</div>
+				<div class="zb-editable-content">
+					<p>
+					早上起来有些晚了<br/>
+					便快点跑了起来到公司8点5分了<br/>
+					我明天7天起最好了<br/>
+					对了忘记告诉你<br/>
+					昨天一件搞笑的事情<br/>
+					那就是叶路阳的签名<br/>
+					保护内心的小男孩<br/>
+					跟妈妈玩的开心点<br/>
+					</p>
+				</div>
+			</div>
+			<div class="main">
+				<div class="title">
+					<span class="date">2016年11月25日</span>
+					<span class="weather">天气霾转多云</span>
+				</div>
+				<div class="zb-editable-content">
+					<p>
+					今天撒了一个小谎<br/>
+					嗯<br/>
+					因为我还在被窝里呢<br/>
+					昨天很开心的解决了一些问题<br/>
+					持续进步吧<br/>
+					耶<br/>
+					很傻叉的表情<br/>
+					</p>
+				</div>
+			</div>
+			<div class="main">
+				<div class="title">
+					<span class="date">2016年11月26日</span>
+					<span class="weather">天气霾转多云</span>
+				</div>
+				<div class="zb-editable-content">
+					<p>现在已经8点了<br/>
+					我好像习惯了晚上晚点走<br/>
+					头有点晕晕的呢<br/>
+					晚安啊月月<br/></p>
+				</div>
+			</div>
+			<div class="main">
+				<div class="title">
+					<span class="date">2016年11月27日</span>
+					<span class="weather">天气霾转多云</span>
+				</div>
+				<div class="zb-editable-content">
+					<p>今天跟月月聊了好长时间<br/>
+					很开心<br/>
+					晚上跑了会步<br/>
+					还是好好的看编程视频<br/>
+					晚安吧<br/></p>
+				</div>
+			</div>
+			<div class="main">
+				<div class="title">
+					<span class="date">2016年11月28日</span>
+					<span class="weather">星期一</span>
+				</div>
+				<div class="zb-editable-content">
+					<p>今天我明白一个道理<br/>
+					要对自己好一点<br/>
+					身体都吃不消的话<br/>
+					还谈什么理想<br/>
+					早安</p>
+				</div>
+			</div>
+			<div class="main">
+				<div class="title">
+					<span class="date">2016年11月29日</span>
+					<span class="weather">天气霾转多云</span>
+				</div>
+				<div class="zb-editable-content">
+					<p>路上已经有很多行人了<br/>早点摊有很多种类的食物<br/>不过我已经没有吃早餐的习惯了<br/>这是一个坏习惯<br/>我应该慢慢去改掉它<br/>我在看逻辑思维<br/>等我看完它<br/><div id="show">寄给你看</div></p>
+				</div>
+			</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年11月30日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天又闹别扭了<br/>
+							我也有点生气<br/>
+							一生气<br/>
+							你<br/>
+							便<br/>
+							不见了<br/><br/>
+						</p>
+						<p><img src="imgs/af9a1b438270d6f82251a9eb8be1ef8b_b.jpg" alt="小熊气球" width="393px" height="313px"><br/></p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月1日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						今天有点焦虑<br/>
+						活很多<br/>
+						也没跟你怎么说话<br/>
+						零食买了呢<br/>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月2日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>路上已经有很多行人了<br/>早点摊有很多种类的食物<br/>不过我已经没有吃早餐的习惯了<br/>这是一个坏习惯<br/>我应该慢慢去改掉它<br/>我在看逻辑思维<br/>等我看完它<br/>寄给你看<br/></p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月3日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+						 今天跟小月月聊天真好<br/>
+						 每次跟你说话就好开心<br/>
+						 心情很高兴<br/>
+						 喜欢你的新新<br/>
+                         爱你不是坚持<br/>
+                         已经成为了一种<br/>
+						 习惯<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月4日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天都4号了呢<br/>
+							小月月今天又去了科室<br/>
+							看着你开心<br/>
+							我就莫名的<br/>
+							心情好了起来<br/>
+							明天你不在<br/>
+							我会想你的<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月5日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天月月在家看书呢<br>
+                            新新都没有怎么跟月月聊天<br>
+							月月在看大冰的书<br>
+							我也很喜欢呢<br>
+							明天见<br>
+							小祖宗<br>
+							晚安<br>
+
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月6日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天小月月玩游戏破纪录了呢<br/>
+							好开心<br/>
+							我们说了很多小时候的事呢<br/>
+							晚安<br/>
+							好开心
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月7日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天我也说了伤人的话<br/>
+							月月肯定伤心透了<br/>
+							对此我感觉很糟糕<br/>
+							月月不管发生什么事<br/>
+							我都不会<br/>
+							放弃的<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月8日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							月月今天很伤心很难过<br/>
+							而我不知道怎么安慰你<br/>
+							只能不停的给你发信息安慰你<br/>
+							我很怕<br/>
+							我跟你说话<br/>
+							你不听<br/>
+							而我却不知道怎么把你逗笑<br/>
+							反正你难过<br/>
+							我陪你<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月9日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天和小月月玩游戏呢<br/>
+							很开心<br/>
+							真好<br/>
+							和月月一块玩游戏最开心了<br/>
+							我们两个在一起<br/>
+							真是再好不过的事<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月10日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天贪吃蛇记录被月月打破了呢<br/>
+
+							决定给月月一个奖励<br/>
+
+							嗯	<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月11日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							月月说的是<br/>
+							新新又说话不算数<br/>
+
+							看行动吧<br/>
+
+							我好像最近<br/>
+
+							颓废了呢<br/>
+
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月12日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天月月很烦躁呢<br/>
+							看着你这样<br/>
+							我也很不开心<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月15日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天跟朋友去喝酒<br/>
+							现在很困很累<br/>
+							不知道说什么<br/>
+							好像今天说了很多<br/>
+							现在想到你<br/>
+							很开心<br/>
+							另外<br/>
+							好撑啊<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月16日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天决定做一个东西<br/>
+							来承载我的日记<br/>
+							只想送给亲爱的你<br/>
+							漆月<br/>
+							我爱你<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月17日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天组长不在<br/>
+							一天都很闲<br/>
+							我已经迈出了一步了<br/>
+							晚上跟月月玩了消消乐<br/>
+							我们10连胜呢<br/>
+							真是一件令人开心的事<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月18日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天有点高兴呢<br/>
+							和月月聊天最开心了<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月21日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天月月吃到零食了<br/>
+							月月吃了巧克力的<br/>
+							好喜欢你吃巧克力呢<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月22日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天跟月月说了很多关于精神方面的事<br/>
+							我也说<br/>
+							以后想娶你<br/>
+							说了很多以后的想法<br/>
+							我很希望它们<br/>
+							都可以实现<br/>
+							嗯<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月23日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							看了几集夏洛克读了几页书<br/>
+							幻想着以后我也可以成为一个<br/>
+							很厉害<br/>
+							很厉害的人<br/>
+							至少<br/>
+							看起来<br/>
+						</p>
+					</div>
+				</div>
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月24日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天平安夜<br/>
+							吃着苹果<br/>
+							哇<br/>
+							真甜啊<br/>
+							不过我有点想你<br/>
+							真希望<br/>
+							能跟你在一块<br/>
+						</p>
+					</div>
+				</div><!--END-->
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月24日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天平安夜<br/>
+							吃着苹果<br/>
+							哇<br/>
+							真甜啊<br/>
+							不过我有点想你<br/>
+							真希望<br/>
+							能跟你在一块<br/>
+						</p>
+					</div>
+				</div><!--END-->
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月24日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天平安夜<br/>
+							吃着苹果<br/>
+							哇<br/>
+							真甜啊<br/>
+							不过我有点想你<br/>
+							真希望<br/>
+							能跟你在一块<br/>
+						</p>
+					</div>
+				</div><!--END-->
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月24日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天平安夜<br/>
+							吃着苹果<br/>
+							哇<br/>
+							真甜啊<br/>
+							不过我有点想你<br/>
+							真希望<br/>
+							能跟你在一块<br/>
+						</p>
+					</div>
+				</div><!--END-->
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月24日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天平安夜<br/>
+							吃着苹果<br/>
+							哇<br/>
+							真甜啊<br/>
+							不过我有点想你<br/>
+							真希望<br/>
+							能跟你在一块<br/>
+						</p>
+					</div>
+				</div><!--END-->
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月24日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天平安夜<br/>
+							吃着苹果<br/>
+							哇<br/>
+							真甜啊<br/>
+							不过我有点想你<br/>
+							真希望<br/>
+							能跟你在一块<br/>
+						</p>
+					</div>
+				</div><!--END-->
+				<div class="main">
+					<div class="title">
+						<span class="date">2016年12月24日</span>
+						<span class="weather">天气霾转多云</span>
+					</div>
+					<div class="zb-editable-content">
+						<p>
+							今天平安夜<br/>
+							吃着苹果<br/>
+							哇<br/>
+							真甜啊<br/>
+							不过我有点想你<br/>
+							真希望<br/>
+							能跟你在一块<br/>
+						</p>
+					</div>
+				</div><!--END-->
+		</div>
+	</div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(function(){
+			var availableTags=[
+				"ActionScript",
+      "路上已经有很多行人了",
+      "早点摊有很多种类的食物",
+      "不过我已经没有吃早餐的习惯了",
+      "这是一个坏习惯",
+      "我应该慢慢去改掉它",
+      "我在看逻辑思维",
+      "等我看完它",
+      "寄给你看",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+			
+			
+			];
+		$("#tags").autocomplete({
+			source:availableTags
+		});
+		});
+	</script>
+ </body>
+</html>

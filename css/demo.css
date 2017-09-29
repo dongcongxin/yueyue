@@ -1,0 +1,175 @@
+﻿*{
+	margin:0;
+	padding:0;
+}
+/*ul li,ol li{
+	list-style:none;	
+}*/
+a{
+	text-decoration:none;
+}
+/*全局样式*/
+.comWidth{
+	width:650px;
+	margin:80px auto;
+}
+.fl{
+	float:left;
+}
+.comWidth_650{
+	width:650px;
+	margin:0 auto;
+}
+/*END 全局样式*/
+
+body{
+	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-size:1.7;
+	background-color:#FFFFFF;
+	color:#222;
+	word-wrap:break-word;
+}
+/* 头部 */
+.headerBar{
+	height:35px;
+	line-height:35px;
+	border:1px solid red;
+	background:#0767c8;
+	background:-webkit-linear-gradient(top,#086ed5,#055db5);
+	background:linear-gradient(to bottom,#086ed5,#055db5);
+	border:1px solid #044e97;
+	box-shadow:0 1px 2px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.15);
+	width:100%;
+	position:fixed;
+	top:0px;
+}
+.logo .icon_title{
+	font-size:18px;
+	color:#fff;
+	font-family:"方正姚体";
+}
+/*搜索框*/
+.searchBox{
+	width:270px;
+	height:25px;
+	margin:6px 0 0 10px;
+	
+}
+.search-text{
+	width:228px;
+	height:25px;
+	border-radius:4px;
+	line-height:25px;
+	padding:2px 6px;
+	background-color:#eleaf2;
+	border:1px solid #045bb2;
+}
+.zu-top-search-btn{
+	width:28px;
+	height:100%;
+	background:#0e78e7;
+	background:-webkit-linear-gradient(top,#0e7bef,#0d73da);
+	border:1px solid #045bb2;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
+	box-shadow:0 1px 2px rgba(0,0,0,.05),inset 0 1px 1px rgba(255,255,255,.15);
+	box-sizing:border-box;
+	outline:0;
+	cursor:pointer;
+}
+.zu-top-search-btn .search-btn{
+	width:17px;
+	height:15px;
+	background:url(../imgs/sprites.auto.2bb79a7e.png) -79px 0;
+	display:block;
+}
+/*话题,首页,发现*/
+.nav-list ul li{
+	float:left;
+	padding:0 5px;
+}
+.nav-list ul li a{
+	color:#ccc;
+}
+.nav-list ul li a:hover{
+	color:#fff;
+}
+
+/* 播放器 */
+.player{
+	margin:2px 0 0 17px;
+}
+/*标题*/
+.zm-editable-content{
+	font-weight:700;
+}
+
+.describe{
+	margin-top:17px;
+	
+}
+/*文章内容*/
+.content{
+	line-height:19px;
+	margin-top:20px;
+}
+span.date{
+	font-weight:bold;
+	font-size:13px;
+}
+span.weather{
+	color:#999;
+}
+/*文章内容*/
+.zb-editable-content{
+	font-weight:normal;
+}
+.main{
+	margin-bottom:20px;
+}
+
+/*左侧日期*/
+.leftArea{
+	position:fixed;
+	width:148px;
+	height:150px;
+	left:-150px;
+	top:256px;
+	border:1px solid red;
+}
+.nav-item{
+	margin:25px; 
+	line-height:1.9;
+}
+p.tip{
+	padding-top:5px;
+}
+/* 分享 */
+#share{
+	width:20px;
+	height:50px;
+	position:absolute;
+	left:148px;
+	top:54px;
+	color:#fff;
+	padding-top:20px;
+	background:blue;
+	display:none;
+}
+
+/*movie_list*/
+.nav-list-move{
+	margin:30px 0 70px 40px;
+	
+}
+
+.nav-list-move ol li{
+	line-height:1.8;
+}
+
+/*图书图片展示区*/
+
+#content img{
+        width:224px;
+        height:262px;
+}
