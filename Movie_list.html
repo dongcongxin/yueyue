@@ -1,0 +1,301 @@
+﻿<html>
+ <head>
+  <title>听闻</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <link rel="stylesheet" type="text/css" href="css/demo.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+  <!--<script src="js/base.js1"></script>-->
+  <style type="text/css">
+	table {
+	font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+  .nav-list ul li{
+  	list-style: none;
+  }
+  </style>
+ </head>
+ <body>
+ <div class="headerBar">
+	<div class="comWidth_650">
+		<div class="logo fl">
+			<span class="icon_title">日 记</span>
+		</div>
+		<div class="searchBox fl">
+			<div class="ui-widget">
+				<input type="text" placeholder="搜索你感兴趣的内容" class="search-text fl" id="tags">
+			</div>
+			<button type="submit" class="zu-top-search-btn">
+				<span class="search-btn" onclick="AddmovieName()"></span>
+			</button>
+		</div>
+	</div>
+	<div class="nav-list fl">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="#">话题</a></li>
+				<li><a href="#">发现</a></li>
+				<li><a href="#">电影</a></li>
+			</ul>
+		
+	</div>
+	<!--播放器-->
+	<audio controls="controls" class="player"  autoplay="autoplay">
+		<source src="music/南拳妈妈 - 家.mp3" type="audio/ogg">
+		<source src="/i/song.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+ </div>
+ <!--电影清单-->
+ <div class="movie_list comWidth">
+	<div class="movie_title">
+		<h2>今年已看的一些电影：<span id="timer">截止到现在:</span></h2>
+		<div class="nav-list-move">
+			<ol style="list-style:decimal" id="nav-list">
+				<li>歌舞青春1</li>
+				<li>歌舞青春2</li>
+				<li>歌舞青春-毕业季</li>
+				<li>福尔摩斯</li>
+				<li>成为简奥斯汀</li>
+				<li>济公</li>
+				<li>模仿游戏</li>
+				<li>心灵捕手</li>
+				<li>美国队长</li>
+				<li>.美国队长2</li>
+				<li>.美国队长3</li>
+				<li>.复仇者联盟</li>
+				<li>.海蒂和爷爷</li>
+				<li>.复仇者联盟2</li>
+				<li>.真爱至上</li>
+				<li>.了不起的盖茨比</li>
+				<li>.人生7年Up</li>
+				<li>.一个购物狂的自白</li>
+				<li>.华尔街</li>
+				<li>.两小无猜</li>
+				<li>.猫鼠游戏</li>
+				<li>.决胜21点</li>
+				<li>.雨人</li>
+				<li>.追梦赤子心</li>
+				<li>.教父</li>
+				<li>.神盾局特工</li>
+				<li>.珍爱</li>
+				<li>.战争游戏</li>
+				<li>.蝴蝶</li>
+				<li>.帕丁顿熊</li>
+				<li>.小鬼当家</li>
+				<li>我家买了动物园</li>
+				<li>写给爸爸的信</li>
+				<li>社交网络</li>
+				<li>速度与激情8</li>
+                                <li>翻滚吧阿信</li>
+                                <li>一条狗的使命</li>
+                                <li>金刚</li>
+                                <li>灿烂人生（上部）</li>
+                                <li>灿烂人生（中部）</li>
+                                <li>灿烂人生（下部）</li>
+                                <li>我是谁没有绝对安全的系统</li>
+                                <li>战狼二</li>
+			</ol>
+		</div>
+		<h2>今年准备看的电影：<span id="timers">截止到现在:</span></h2>
+			<div class="nav-list-move">
+				<ol style="list-style:decimal">
+					<li>居里夫人</li>
+					<li>知无涯者</li>
+					<li>万物理论</li>
+					<li>奇爱博士</li>
+					<li>致命魔术</li>
+					<li>爱因斯坦和爱丁顿</li>
+					<li>Wall Street（华尔街） (1987) </li>
+					<li>.Glengarry Glenn Ross（拜金一族）(1992) </li>
+					<li>.Boiler Room（锅炉房）(2000) </li>
+					<li>.Pirates of Silicon Valley（硅谷传奇）(1999) </li>
+					<li>.The Coca-Cola Kid（可口可乐小子）(1985) </li>
+					
+				</ol>
+				
+			</div>
+	</div>
+ 
+ 
+ </div>
+  <!--电影清单-->
+ <div class="movie_list comWidth">
+	<div class="movie_title">
+		<h2>今年已看的一些书籍：</h2>
+		<div class="nav-list-move">
+			<ol style="list-style:decimal">
+				<li>《雨季不会来》</li>
+				<li>《送你一匹马》</li>
+			</ol>
+		</div>
+		<h2>今年看的编程的书:<span id="time">截止到现在:</span></h2>
+		<div class="nav-list-move">
+			<ol style="list-style:decimal" id="aol">
+				<li><a href="imgs/javascript语言精髓.png">《javascript语言精髓》</a></li>
+                <li><a href="imgs/javascriptDom编程艺术.png">《javascript Dom编程艺术》</a></li>
+                <li><a href="imgs/javascript权威指南.png">《javascript权威指南》</a></li>
+                <li><a href="imgs/编写可维护的javascript.png">编写可维护的javascript代码</a></li>
+                <li><a href="imgs/javascript设计模式.png">javascript设计模式</a></li>
+                <li><a href="imgs/图解http.png">图解http</a></li>			
+			</ol>
+             <div id = "content" style="margin-top:15px">
+                  <img src="imgs/javascript语言精髓.png" width="224" height="262">
+             </div>
+		</div>
+		<h2>今年准备看的书籍：</h2>
+			<div class="nav-list-move">
+				<ol style="list-style:decimal">
+				    <li>少有人走的路</li>
+					<li>小狗钱钱</li>
+					<li>钱的外遇</li>
+					
+<li>一个分析师的醒悟</li>
+					<li>有钱人想的和你不一样</li>
+					<li>邻家的百万富翁</li>
+					<li>爱因斯坦和爱丁顿</li>
+					<li>Wall Street（华尔街） (1987) </li>
+					<li>.Glengarry Glenn Ross（拜金一族）(1992) </li>
+					<li>.Boiler Room（锅炉房）(2000) </li>
+					<li>.Pirates of Silicon Valley（硅谷传奇）(1999) </li>
+					<li>.The Coca-Cola Kid（可口可乐小子）(1985) </li>
+					
+				</ol>
+				
+			</div>
+                 <h2>计划：</h2>
+			<div class="nav-list-move">
+				<ol style="list-style:decimal">
+					<li>node.js-基本模块</li>
+					<li>javascript痛点之一原型</li>
+					<li>一个分析师的醒悟</li>
+					<li>有钱人想的和你不一样</li>
+					<li>邻家的百万富翁</li>
+					<li>爱因斯坦和爱丁顿</li>
+					<li>Wall Street（华尔街） (1987) </li>
+					<li>.Glengarry Glenn Ross（拜金一族）(1992) </li>
+					<li>.Boiler Room（锅炉房）(2000) </li>
+					<li>.Pirates of Silicon Valley（硅谷传奇）(1999) </li>
+					<li>.The Coca-Cola Kid（可口可乐小子）(1985) </li>
+					
+				</ol>
+
+                    
+	</div>
+ 
+ 
+ </div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+*
+*----------Dragon be here!----------/
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+* ━━━━━━神兽出没━━━━━━
+ 
+
+
+		$(function(){
+			var availableTags=[
+				"ActionScript",
+      "路上已经有很多行人了",
+      "早点摊有很多种类的食物",
+      "不过我已经没有吃早餐的习惯了",
+      "这是一个坏习惯",
+      "我应该慢慢去改掉它",
+      "我在看逻辑思维",
+      "等我看完它",
+      "寄给你看",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+			
+			
+			];
+		$("#tags").autocomplete({
+			source:availableTags
+		});
+		});
+	</script>
+	<script>
+
+	function AddmovieName(){
+		var search = document.getElementById("tags");
+		var navList = document.getElementById("nav-list");
+		var ol = document.createElement("li");
+		navList.appendChild(ol);
+		 ol.innerHTML = search.value;
+		 if(ol.innerHTML){
+		 	search.value="";
+		 }
+	}
+
+	 // 截至当前时间的函数
+	function getTimer(defaultDate,defaultmonth,timer){
+		var d =new Date();
+		var newMoth = d.getMonth()+1;
+		var newDate = d.getDate();
+		var timer = document.getElementById(timer);
+		var mothDiff=parseInt(newMoth-defaultmonth)*30;
+		var datDiff = parseInt(newDate-defaultDate);
+		timer.innerHTML = "截至现在已经过去:"+parseInt(mothDiff+datDiff)+"天";
+	}
+
+	// 今年已看的一些电影:截至到当前时间过去的天数
+	getTimer(0,3,"timer");
+
+    // 今年看的编程的书:截至到当前时间过去的天数
+	getTimer(21,5,"time");
+
+    // 今年坚持计划：截至到当前时间过去的天数
+    getTimer(2,7,"pages");
+
+    // 切换图片
+    function getURL(index) {
+ 		var content = document.getElementById("content");
+ 		var img     = content.getElementsByTagName("img")[0];
+        img.setAttribute("src", index);
+    }
+    
+    var  ol  = document.getElementById("aol");
+    var  aLi =  ol.getElementsByTagName("a");
+    
+    for(let i = 0; i<aLi.length; i++) {
+     	
+     	aLi[i].onclick = function() {
+     		getURL(this);
+     		return false
+     	}
+     }
+	</script>
+ </body>
+</html>
