@@ -1,21 +1,21 @@
 
-// 页面加载后触发
-
+//加载页面
 window.onload = function(){
-	var obtn = document.getElementById('btn');
-	// 获取页面可视区的高度
-	var clientHeight = document.documentElement.clientHeight;
+	var obtn = document.getElementById("btn");
+	//获取页面可视区域的高度
+	var clientHeight = document.documentElement.clientHeight || document.body.clientHeight ;
 	var timer = null;
 	var isTop = true;
 	
 	// 滚动条滚动时触发
 	window.onscroll = function(){
 		var osTop = document.documentElement.scrollTop || document.body.
-			scrollTop;
-		if(osTop >= clientHeight){
-			obtn.style.display = 'block';
+		    scrollTop;
+		
+		if (osTop >= clientHeight){
+			obtn.style.display = "block";
 		}else{
-			obtn.style.display = 'none';
+			obtn.style.display = "none";
 		}
 		
 		if (!isTop){
@@ -25,23 +25,20 @@ window.onload = function(){
 	}
 	
 	obtn.onclick = function(){
-		// 设置定时器
+		//设置定时器
 		timer = setInterval(function(){
-			// 获取滚动条距离顶部的高度
+			//获取滚动条距离顶部的高度
 			var osTop = document.documentElement.scrollTop || document.body.
-			scrollTop;
+		    scrollTop;
 			var ispeed = Math.floor(-osTop / 6);
-			document.documentElement.scrollTop = document.body.scrollTop = osTop + 
-			ispeed;
 			
 			isTop = true;
-			
 			if (osTop == 0){
 				clearInterval(timer);
 			}
+		    document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed;
 			
 		},30);
-		
-		
+	    
 	}
 }

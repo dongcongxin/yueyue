@@ -1,0 +1,38 @@
+﻿<html>
+ <head>
+  <title>cpu卡顿</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  
+  <style type="text/css">
+   *{
+       margin:0;
+	   padding:0;
+   }
+   img{
+       width:200px;
+	   height:200px;
+   }
+  </style>
+ </head>
+ <body>
+    
+	 <img src="1.jpg" alt="美女图片（只是为了演示）"><br/>
+	 <input type="button" value="点击我可看高清视频" id="btn">
+	 
+	 <script>
+	     window.onload = function(){
+		     //获取按扭
+		     var obtn = document.getElementById("btn");
+			 
+			 //触发点击事件
+			 obtn.onclick = function(){
+			     for (let i = 0; i<1000000; i++) {
+				     console.log("你被整蛊了");
+				 }
+			 }
+		 
+		 
+		 }
+	 </script>
+ </body>
+</html>
