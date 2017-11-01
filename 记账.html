@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html> 
+<html>
+ <head>
+  <title>价格统计</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" type="image/x-icon" href="imgs/icon/favicon.ico" media="screen">
+   <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+   <script src="lib/vue/vue.js"></script>
+ </head>
+ <body>
+
+   <table class="table table-bordered">
+	<caption>边框表格布局</caption>
+	<thead>
+		<tr>
+			<th>姓名</th>
+			<th>早餐</th>
+			<th>午餐</th>
+			<th>晚餐</th>
+			<th>总计￥</th>
+		</tr>
+	</thead>
+	<tbody id="app">
+		<tr v-for="site in sites">
+		   <td>{{site.name}}</td>
+		   <td>{{site.breakfast}}</td>
+		   <td>{{site.lunch}}</td>
+		   <td>{{site.dinner}}</td>
+		   <td>{{parseFloat((site.breakfast).match(/[\d.]/g).join(''))+parseFloat((site.lunch).match(/[\d.]/g).join(''))+parseFloat((site.dinner).match(/[\d.]/g).join(''))}}</td>
+		</tr>
+	</tbody>
+</table>
+<script>
+var vm = new Vue({
+    el:"#app",
+	data:{
+	  sites:[
+	     {"name":"飞哥","breakfast":"牛奶50.5","lunch":"盖饭1","dinner":"水饺10",},
+		 {"name":"小阳","breakfast":"牛奶10","lunch":"盖饭10","dinner":"水饺20",},
+		 {"name":"小董","breakfast":"牛奶10","lunch":"盖饭10","dinner":"水饺20",}
+	  ]
+	}
+})
+</script>
+ </body>
+</html>
