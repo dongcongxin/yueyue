@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html> 
+<html>
+ <head>
+  <title>外推平台</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" type="image/x-icon" href="imgs/icon/favicon.ico" media="screen">
+   <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+   <style type="text/css">
+       .footer{
+	       width:600px;
+		   height:60px;
+		   font-size:12px;
+	       margin:150px auto;
+           margin-top：60px;		   
+	   }
+       .footer .pages .list li{
+	       float:left;
+		   list-style:none;
+		   text-align:center;
+		   line-height:60px;
+	   }
+	   .footer .pages .list li a{
+	       padding:0 5px;
+	       text-decoration:none;
+	   }
+   
+   </style>
+ </head>
+ <body>
+    <div class="table-responsive container">
+  <table class="table">
+    <caption>2017年10月26日</caption>
+    <thead>
+      <tr>
+	    <th>索引</th>
+        <th>平台名称</th>
+        <th>网址</th>
+        <th>限制</th></tr>
+    </thead>
+    <tbody id="app">
+	     <tr v-for="user in users">	 
+                   <td>{{ $index+1 }}</td>		 
+                   <td>{{user.name}}</td>
+                   <td v-html="user.age">{{user.age}}</td>
+                   <td>{{user.school}}</td>
+         </tr>
+    </tbody>
+  </table>
+</div>
+<script src="http://cdn.jsdelivr.net/vue/1.0.7/vue.min.js"></script>
+<script>
+var vm = new Vue({
+    el:"#app",
+	data:{
+      users: [
+        {'name': '中华商人', 'age': '<a href="http://www.china-shang.com/exhibit/201710/25/zh_2109.html" target="_blank">展会</a>', 'school': '无限制'},
+        {'name': '中国叉车网', 'age': '<a href="http://www.cnforklift.com/news/201710/25/17928.html" target="_blank">资讯</a>', 'school': '10条'},
+        {'name': '搜衡网', 'age': '<a href="http://www.souheng.net/sell/show.php?itemid=685" target="_blank">供应</a>', 'school': '待确认'},
+		{'name': '路通网', 'age': '<a href="http://www.whxhl.com.cn/" target="_blank">新闻中心</a>', 'school': '待确认'},
+		{'name': '无忧贸易', 'age': '<a href="http://www.5131w.com/quote/show-59466.html" target="_blank">行情</a>', 'school': '待确认'},
+		{'name': '我发网', 'age': '<a href="http://www.mine566.com/hangqing/show-14679.html" target="_blank">行情</a>', 'school': '需要付费（10块钱保证金）'},
+		{'name': '灵龟', 'age': '<a href="http://bbs.reptilesworld.com/thread-2259912-1-1.html" target="_blank">水龟饲养</a>', 'school': '待确认'},
+		{'name': '重庆妈妈网', 'age': '<a href="http://cache.baiducontent.com/c?m=9d78d513d9d430de4f9ae5697d60c012194381132ba6a3020cd3843891732b415321a3e52878564291d27d141cb20c19afe7360566407fe4c49b9f4aaae7c56e32ce7d74274fd05612a51aaccc472ec722875a9fac0ee7ccf32593d98895800a&p=ce7ddc1187904ead00bd9b7f0655&newp=8f338916d9c118fb43bd9b7f065092695912c10e3cd2c44324b9d71fd325001c1b69e3b823281603d4c6786c15e9241dbdb239256b5579e380&user=baidu&fm=sc&query=%CC%EC%BD%F2%CA%A5%B0%B2&qid=8ee655210000d677&p1=48" target="_blank">房产装修</a>', 'school': '待确认'},
+		{'name': '建设工程教育网', 'age': '<a href="http://cache.baiducontent.com/c?m=9f65cb4a8c8507ed4fece763104687270e54f73b67848c542583984384642c101a39feef7a62575bc4c50a6016af3f58f7b66b306c5237b7edcb824bd6bd912d3888506e3643d855578e59f9c45155c037e35cfede12f0caf12592dec5a3de4327bd44737997818c&p=923eda0285cc43b408e2947d4d47&newp=9933cf16d9c15ff117bd9b7e0e5192695912c10e37c3864e1290c408d23f061d4866e0bf2d241703d0c1777347c2080ba8ff612e611d7ef8&user=baidu&fm=sc&query=%B3%A4%C9%B3%B3%FE%D1%C5&qid=9956710000018a7a&p1=5" target="_blank">一级建造师</a>', 'school': '待确认'},
+		{'name': '兰陵信息港', 'age': '<a href="http://cache.baiducontent.com/c?m=9d78d513d9d431ae4f9e92697c1dc016184381132ba7d1020ba3843e90732a46506793ac51220774a5d20a6116df3a48adb0687d6d4566f58cc9fb57c0fed76d3888506a2340d81a4e865febdc4652907dcf47b2f34dbaa7ab6ec7f3c5d3a95753c959046d8087d11c5f4a&p=c43ed116d9c152ed40bd9b7d0900&newp=8b2a9715d9c045dd44fcca3e5a4c92695912c10e3ac3864e1290c408d23f061d4866e0bf2d241703d0c1777347c2080ba8ff612e61&user=baidu&fm=sc&query=%B3%A4%C9%B3%B3%FE%D1%C5%D2%BD%D4%BA&qid=f5b7060d0002c8db&p1=23" target="_blank">免费发布信息</a>', 'school': '待确认'},
+		{'name': '360化妆品网', 'age': '<a href="http://news.360xh.com/201710/25/36181.html" target="_blank">新闻-商业快讯</a>', 'school': '待确认'},
+		{'name': 'OK甲等企业联盟', 'age': '<a href="http://okjd.net/exhibit/show.php?itemid=3157" target="_blank">展会》工业品行业展会</a>', 'school': '待确认'}
+      ],
+	}
+
+
+})
+</script>
+ </body>
+</html>

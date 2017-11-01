@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html> 
+<html>
+ <head>
+  <title>价格统计</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" type="image/x-icon" href="imgs/icon/favicon.ico" media="screen">
+   <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+   <script src="http://cdn.jsdelivr.net/vue/1.0.7/vue.min.js"></script>
+ </head>
+ <body>
+
+   <table class="table table-bordered">
+	<caption>边框表格布局</caption>
+	<thead>
+		<tr>
+			<th>下拉词分类</th>
+			<th>数量</th>
+			<th>价格￥</th>
+		</tr>
+	</thead>
+	<tbody id="app">
+		<tr>
+		    <td>相关搜索</td>
+			<td><input type="text" v-model="message"></td>
+			<td>{{ message*0.5}}</td>
+		</tr>
+		<tr>
+		    <td>移动下拉词</td>
+			<td><input type="text" v-model="message1"></td>
+			<td>{{ message1*1}}</td>
+		</tr>
+		<tr>
+		    <td>uc下拉词</td>
+			<td><input type="text" v-model="message2"></td>
+			<td>{{ message2*0.5}}</td>
+		</tr>
+		<tr>
+		    <td>手机号</td>
+			<td><input type="text" v-model="message3"></td>
+			<td>{{ message3*4}}</td>
+		</tr>
+	</tbody>
+</table>
+<script>
+var vm = new Vue({
+    el:"#app",
+	data:{
+	   message:null,
+	   message1:null,
+	   message2:null,
+	   message3:null
+	}
+})
+</script>
+ </body>
+</html>
