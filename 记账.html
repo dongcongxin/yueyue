@@ -9,7 +9,7 @@
    <script src="lib/vue/vue.js"></script>
  </head>
  <body>
-
+<div class="container">
    <table class="table table-bordered">
 	<caption>边框表格布局</caption>
 	<thead>
@@ -31,14 +31,15 @@
 		</tr>
 	</tbody>
 </table>
+</div>
 <script>
 var vm = new Vue({
     el:"#app",
 	data:{
 	  sites:[
-	     {"name":"飞哥","breakfast":"牛奶50.5","lunch":"盖饭1","dinner":"水饺10",},
-		 {"name":"小阳","breakfast":"牛奶10","lunch":"盖饭10","dinner":"水饺20",},
-		 {"name":"小董","breakfast":"牛奶10","lunch":"盖饭10","dinner":"水饺20",}
+	     {"name":"飞哥","breakfast":"地铁6块","lunch":"0","dinner":"0",},
+		 {"name":"小阳","breakfast":"4块","lunch":"0","dinner":"0",},
+		 {"name":"小董","breakfast":"荷包蛋9块","lunch":"0","dinner":"0",}
 	  ]
 	}
 })
