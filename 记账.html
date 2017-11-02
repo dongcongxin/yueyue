@@ -27,20 +27,66 @@
 		   <td>{{site.breakfast}}</td>
 		   <td>{{site.lunch}}</td>
 		   <td>{{site.dinner}}</td>
-		   <td>{{parseFloat((site.breakfast).match(/[\d.]/g).join(''))+parseFloat((site.lunch).match(/[\d.]/g).join(''))+parseFloat((site.dinner).match(/[\d.]/g).join(''))}}</td>
+		   <td>{{parseFloat((site.breakfast).match(/[\d.]/g).join (''))+parseFloat((site.lunch).match(/[\d.]/g).join(''))+parseFloat((site.dinner).match (/[\d.]/g).join(''))}}</td>
 		</tr>
 	</tbody>
 </table>
 </div>
+  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:400px;margin-top:40px;"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="lib/echarts/echarts.js"></script>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: ''
+            },
+            tooltip: {},
+            legend: {
+                data:["早餐价格","午饭价格","晚饭价格"]
+            },
+            xAxis: {
+                data: ["刘总","飞哥","小阳","小董"]
+            },
+            yAxis: {},
+            series: [{
+                name: '早餐价格',
+                type: 'bar',
+                data: [1, 6, 4, 9]
+            },
+			{
+                name: '午饭价格',
+                type: 'bar',
+                data: [17, 15, 11, 0]
+            },
+			{
+                name: '晚饭价格',
+                type: 'bar',
+                data: [21, 1.5, 11, 73]
+            },
+			 
+			]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+       
 <script>
 var vm = new Vue({
     el:"#app",
 	data:{
 	  sites:[
-	     {"name":"刘总","breakfast":"公交1块","lunch":"0","dinner":"0",},
-             {"name":"飞哥","breakfast":"地铁6块","lunch":"0","dinner":"0",},
-	     {"name":"小阳","breakfast":"4块","lunch":"0","dinner":"0",},
-             {"name":"小董","breakfast":"荷包蛋9块","lunch":"0","dinner":"0",}
+	     {"name":"刘总","breakfast":"公交1块","lunch":"17块   ","dinner":"21块",},
+             {"name":"飞哥","breakfast":"地铁6块","lunch":"15块","dinner":"干脆面1.5",},
+	     {"name":"小阳","breakfast":"4块","lunch":"11块","dinner":"11",},
+             {"name":"小董","breakfast":"荷包蛋9块","lunch":"一个汉堡,汤0","dinner":"一份黄焖鸡三份炒饼一份土豆丝73",}
 	  ]
 	}
 })
