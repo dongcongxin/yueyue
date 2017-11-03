@@ -34,7 +34,7 @@
 </div>
   <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="height:400px;margin-top:40px;"></div>
-	<div id="radius" style="height:400px;margin-top:170px;"></div>
+	<div id="radius" style="height:400px;margin-top:40px;"></div>
     <!-- ECharts单文件引入 -->
     <script src="lib/echarts/echarts.js"></script>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
@@ -42,45 +42,6 @@
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
-
-        // 指定图表的配置项和数据
-        var option = {
-            title: {
-                text: ''
-            },
-            tooltip: {},
-            legend: {
-                data:["早餐价格","午饭价格","晚饭价格"]
-            },
-            xAxis: {
-                data: ["刘总","飞哥","小阳","小董"]
-            },
-            yAxis: {},
-            series: [{
-                name: '早餐价格',
-                type: 'bar',
-                data: [6, 25, 4, 13.5]
-            },
-			{
-                name: '午饭价格',
-                type: 'bar',
-                data: [15, 34, 15, 0]
-            },
-			{
-                name: '晚饭价格',
-                type: 'bar',
-                data: [0, 0, 0, 0]
-            },
-			 
-			]
-        };
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-    </script>
-      <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('radius'));
 
         // 指定图表的配置项和数据
         option = {
@@ -91,9 +52,9 @@
         formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
     legend: {
-        orient : 'horizontal',
-        x : 'center',
-        data:['刘总','飞哥','小阳','小董']
+        orient : 'vertical',
+        x : 'left',
+        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
     },
     toolbox: {
         show : true,
@@ -124,10 +85,11 @@
             radius : '55%',
             center: ['50%', '50%'],
             data:[
-                {value:15, name:'刘总'},
-                {value:34, name:'飞哥'},
-                {value:15, name:'小阳'},
-                {value:0, name:'小董'},
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:234, name:'联盟广告'},
+                {value:135, name:'视频广告'},
+                {value:1548, name:'搜索引擎'}
             ]
         }
     ]
@@ -137,6 +99,67 @@
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
     </script>
+	<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('radius'));
+
+        // 指定图表的配置项和数据
+        option = {
+    title : {
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true, 
+                type: ['pie', 'funnel'],
+                option: {
+                    funnel: {
+                        x: '25%',
+                        width: '50%',
+                        funnelAlign: 'left',
+                        max: 1548
+                    }
+                }
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:234, name:'联盟广告'},
+                {value:135, name:'视频广告'},
+                {value:1548, name:'搜索引擎'}
+            ]
+        }
+    ]
+};
+                    
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+       
 <script>
 var vm = new Vue({
     el:"#app",
