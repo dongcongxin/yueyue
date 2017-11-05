@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html> 
+<html>
+ <head>
+  <title>登录页面</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+   <link rel="shortcut icon" type="image/x-icon" href="imgs/icon/favicon.ico" media="screen">
+   <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+   <script src="lib/vue/vue.js"></script>
+   <style type="text/css">
+   .container{
+      position:relative;
+	  left:250px;
+	  top:300px;
+   }
+   </style>
+ </head>
+ <body>
+ <div class="container" id="app">
+ <div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" @click="sendGo()">Go!</button>
+      </span>
+      <input type="text" class="form-control" placeholder="Search for..." v-model="message">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+</div>
+<script>
+new Vue({
+    el:"#app",
+	data:{
+        message:null
+	},
+	methods:{
+	    sendGo:function(){
+		    if(this.message === "叶路阳"){
+			   window.location.href="https://dongcongxin.github.io/yueyue/%E4%BB%B7%E6%A0%BC%E7%BB%9F%E8%AE%A1";
+			}else if(this.message ==="刘港"){
+			   window.location.href="https://dongcongxin.github.io/yueyue/%E4%BB%B7%E6%A0%BC%E7%BB%9F%E8%AE%A1";
+			}else if(this.message ==="郭新飞"){
+			   window.location.href="https://dongcongxin.github.io/yueyue/%E4%BB%B7%E6%A0%BC%E7%BB%9F%E8%AE%A1";
+			}else{
+			    alert("请输入姓名");
+			}
+		}
+	}
+
+})
+</script>
+ </body>
+</html>
