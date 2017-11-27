@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>平常收藏的链接</title>
+</head>
+<body>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+  *{margin:0;padding:0}
+  /* 主题 */
+  .container{
+      width:900px;
+	  height:800px;
+	  margin:0 auto;
+	  background-color:#e5eecc;
+  }
+  
+  /* 主要内容 */
+  .list{
+     padding:30px 0 0 30px;;
+  }
+  /*标题*/
+  .list_title{
+      height:40px;
+      text-align:center;
+      line-height:40px;
+  }
+  .list_title h3{
+      float:left;
+  }
+  .list_title span{
+      float:right; 
+      padding-right:50px;
+  }
+  .list_title span:hover{
+      cursor:pointer;
+  }
+  /* 收藏的链接 */
+  .nav_list li{
+      margin:10px 0 0 57px;
+  }
+  .nav_list li a{
+      text-decoration:none;
+  }
+  .nav_list li a:hover{
+      text-decoration:underline;
+  }
+</style>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+</head>
+
+<body> 
+  <div class="container">
+      <div class="list">
+	     <!--前端文章部分-->
+	     <div class="list_title">
+		     <h3>前端文章</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list">
+		     <li><a href="http://www.chinaz.com/news/2011/1017/213987.shtml" target="_blank">我是如何学习计算机编程的</a></li>
+			 <li><a href="https://www.zhihu.com/question/46943112?sort=created" target="_blank">有哪些令人惊叹的javascript代码</a></li>
+			 <li><a href="https://zhuanlan.zhihu.com/p/19796639?columnSlug=vczh-nichijou" target="_blank">如何成为牛逼的程序员-vczh</a></li>
+			 <li><a href="http://www.cnblogs.com/aaronjs/articles/2167431.html" target="_blank">执行环境，作用域--艾伦博客</a></li>
+                         <li><a href="https://www.zhihu.com/question/19651401" target="_blank">学习JavaScript，有哪些好的博客或者网站推荐？</a></li>
+                         <li><a href="https://zhuanlan.zhihu.com/p/20677058" target="_blank">我的编程生涯里启发我的15本书</a></li>
+		 </ol>
+		 <!--工作相关-->
+		 <div class="list_title">
+		     <h3>工作相关</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list">
+		     <li><a href="https://www.zhihu.com/question/19599216" target="_blank">如何提高逻辑思维能力</a></li>
+			 <li><a href="http://zh.wikihow.com/%E9%A6%96%E9%A1%B5" target="_blank">wikihow</a></li>
+			 <li><a href="http://www.onini.cn/11rozq3q" target="_blank">一号行天下－账号专卖店</a></li>
+			 <li><a href="http://www.51ym.me/User/Register.aspx" target="_blank">易码</a></li>
+		 </ol>
+	  
+                  <!--游戏相关-->
+                  <div class="list_title">
+		     <h3>游戏相关</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list">
+		     <li><a href="#" target="_blank">我是如何学习计算机编程的</a></li>
+			 <li><a href="#" target="_blank">我是如何学习计算机编程的</a></li>
+			 <li><a href="#" target="_blank">我是如何学习计算机编程的</a></li>
+			 <li><a href="#" target="_blank">我是如何学习计算机编程的</a></li>
+		 </ol>
+      </div>
+	  
+  </div>
+  <script>
+      $(function(){
+	      $(".hidden").each(function(){
+		      $(this).click(function(){
+			     if($(this).parent().next().is(":visible")){
+					  $(this).parent().next().hide("slow");	 
+					  $(this).text("显示/隐藏");				  
+				 }else{
+					  $(this).parent().next().show("slow");
+					  $(this).text("隐藏/显示");
+				 }
+			  })
+		  })
+	  })
+  </script>
+</html>
+</body>
+</html>

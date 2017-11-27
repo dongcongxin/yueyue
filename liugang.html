@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html> 
+<html>
+ <head>
+  <title>叶路阳消费情况</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+   <link rel="shortcut icon" type="image/x-icon" href="imgs/icon/favicon.ico" media="screen">
+   <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+   <script src="lib/vue/vue.js"></script>
+ </head>
+ <body>
+ <table class="table table-striped" id="app">
+    <thead>
+    <tr>
+        <th>Student-ID</th>
+        <th>Breakfas</th> 
+		<th>lunch</th>
+		<th>dinner</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="item in items">
+        <td>{{item.datas}}</td>
+        <td>{{item.Breakfas}}</td>
+		<td>{{item.lunch}}</td>
+		<td>{{item.dinner}}</td>
+	
+    </tr>
+    </tbody>
+</table>
+ <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="radius" style="height:400px;margin-top:170px;"></div>
+    <!-- ECharts单文件引入 -->
+    <script src="lib/echarts/echarts.js"></script>
+   
+ <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('radius'));
+
+        // 指定图表的配置项和数据
+        option = {
+    title : {
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'horizontal',
+        x : 'center',
+        data:['烟','水','板面+鸡蛋+丸子','网费','代收费']
+    },
+    <!-- toolbox: { -->
+        <!-- show : true, -->
+        <!-- feature : { -->
+            <!-- mark : {show: true}, -->
+            <!-- dataView : {show: true, readOnly: false}, -->
+            <!-- magicType : { -->
+                <!-- show: true,  -->
+                <!-- type: ['pie', 'funnel'], -->
+                <!-- option: { -->
+                    <!-- funnel: { -->
+                        <!-- x: '25%', -->
+                        <!-- width: '50%', -->
+                        <!-- funnelAlign: 'left', -->
+                        <!-- max: 1548 -->
+                    <!-- } -->
+                <!-- } -->
+            <!-- }, -->
+            <!-- restore : {show: false}, -->
+            <!-- saveAsImage : {show: false} -->
+        <!-- } -->
+    <!-- }, -->
+    calculable : true,
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:3, name:'烟'},
+                {value:2, name:'水'},
+                {value:1, name:'板面+鸡蛋+丸子'},
+                {value:2, name:'网费'},
+				{value:1, name:'代收费'}
+            ]
+        }
+    ]
+};
+                    
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+<script>
+new Vue({
+    el:"#app",
+	data:{
+	    items:[
+		   {"datas":"2017-11-02","Breakfas":"未知","lunch":"未知","dinner":"代收费,烟水网费"},
+		   {"datas":"2017-11-03","Breakfas":"未知","lunch":"未知","dinner":"牛肉板面加鸡蛋丸子烟"},
+		   {"datas":"2017-11-04","Breakfas":"未知","lunch":"未知","dinner":"烟红牛网费"},
+		   {"datas":"2017-11-05","Breakfas":"未知","lunch":"未知","dinner":"未知"},
+		
+		]
+	
+	}
+
+})
+</script>
+ </body>
+</html>

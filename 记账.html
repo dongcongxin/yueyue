@@ -138,6 +138,11 @@
         myChart.setOption(option);
     </script>
 <script>
+Vue.component('todo-item',{
+    props:['todo'],
+	template:"<td>{{ todo.name}}/td>"
+
+})
 var vm = new Vue({
     el:"#app",
 	data:{
