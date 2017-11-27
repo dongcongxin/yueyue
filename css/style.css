@@ -2,7 +2,7 @@
 
 body{font-size:12px;color:#666}
 
-#box_bg{width:440px;height:10px;background:url(../images/bg.gif) no-repeat;padding:24px 48px;margin:10px auto;}
+#box_bg{width:440px;height:10px;background:url(../images/bg.gif) no-repeat;padding:24px 48px;margin:10px auto}
 #container{height:10px;position:relative;}
 .line{height:10px;position:absolute;}
 #white,#green{width:100%;}
