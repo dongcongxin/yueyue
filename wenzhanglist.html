@@ -54,6 +54,16 @@
   .nav_list li a:hover{
       text-decoration:underline;
   }
+  /*言语收藏*/
+  .yueyue li ul{
+      margin-top:-8px;
+	  display:none;
+  }
+  .yueyue li a span{
+      margin-left:709px;
+	  font-weight:bold;
+	  font-size:18px;
+  }
 </style>
 <script src="lib/jquery/dist/jquery.min.js">
 </script>
@@ -72,9 +82,9 @@
 </div>
 
        <div style="width:440px; margin:0px auto;">
-	 <div id="aa2" class="scope">收藏了<span id="aa"></span>条链接</div>
-	 <div id="bb2" class="scope"><span id="bb"></span></div>
-	  <!--<div id="all2" class="scope"><span id="all"></span></div>-->
+	 <div id="aa2" class="scope">新新收藏了<span id="aa"></span>条链接</div>
+	 <div id="bb2" class="scope">月月收藏了<span id="bb"></span>条链接</div>
+	 <div id="all2" class="scope">总共<span id="all"></span>条链接</div>
        </div> 
       </div>
       <div class="list">
@@ -83,44 +93,66 @@
 		     <h3>前端文章</h3>
 			 <span class="hidden">隐藏/显示</span>
 		 </div>
-		 <ol class="nav_list">
+		 <ol class="nav_list xinxin">
 		     <li><a href="http://www.chinaz.com/news/2011/1017/213987.shtml" target="_blank">我是如何学习计算机编程的</a></li>
 			 <li><a href="https://www.zhihu.com/question/46943112?sort=created" target="_blank">有哪些令人惊叹的javascript代码</a></li>
 			 <li><a href="https://zhuanlan.zhihu.com/p/19796639?columnSlug=vczh-nichijou" target="_blank">如何成为牛逼的程序员-vczh</a></li>
 			 <li><a href="http://www.cnblogs.com/aaronjs/articles/2167431.html" target="_blank">执行环境，作用域--艾伦博客</a></li>
-                         <li><a href="https://www.zhihu.com/question/19651401" target="_blank">学习JavaScript，有哪些好的博客或者网站推荐？</a></li>
-                         <li><a href="https://zhuanlan.zhihu.com/p/20677058" target="_blank">我的编程生涯里启发我的15本书</a></li>
+             <li><a href="https://www.zhihu.com/question/19651401" target="_blank">学习JavaScript，有哪些好的博客或者网站推荐？</a></li>
+             <li><a href="https://zhuanlan.zhihu.com/p/20677058" target="_blank">我的编程生涯里启发我的15本书</a></li>
 		 </ol>
 		 <!--工作相关-->
 		 <div class="list_title">
 		     <h3>工作相关</h3>
 			 <span class="hidden">隐藏/显示</span>
 		 </div>
-		 <ol class="nav_list">
+		 <ol class="nav_list xinxin">
 		     <li><a href="https://www.zhihu.com/question/19599216" target="_blank">如何提高逻辑思维能力</a></li>
 			 <li><a href="http://zh.wikihow.com/%E9%A6%96%E9%A1%B5" target="_blank">wikihow</a></li>
 			 <li><a href="http://www.onini.cn/11rozq3q" target="_blank">一号行天下－账号专卖店</a></li>
 			 <li><a href="http://www.51ym.me/User/Register.aspx" target="_blank">易码</a></li>
-                          <li><a href="http://www.qichacha.com/" target="_blank">企查查</a></li>
+             <li><a href="http://www.qichacha.com/" target="_blank">企查查</a></li>
 		 </ol>
 	  
                   <!--收藏相关-->
-                  <div class="list_title">
+         <div class="list_title">
 		     <h3>收藏相关</h3>
 			 <span class="hidden">隐藏/显示</span>
 		 </div>
-		 <ol class="nav_list">
+		 <ol class="nav_list xinxin">
 		     <li><a href="http://www.360doc.com/content/16/0520/15/5320383_560730485.shtml" target="_blank">知乎上赞同最多的答案</a></li>
 			 <li><a href="https://www.wenjuan.com/lib_detail_full/5750016fa320fc8bf7ae9860" target="_blank">微信公众号问答模版</a></li>
 			 <li><a href="https://www.zhihu.com/question/35005800/answer/61498512" target="_blank">想要充实自己，有哪 10 本书或者 10 部电影值得推荐？</a></li>
 			 <li><a href="https://www.zhihu.com/question/28125763/answer/39526642" target="_blank">淘宝上有哪些神店</a></li>
 		 </ol>
+
+                <!--言语-->
+         <div class="list_title">
+		     <h3>言语相关</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+		     <li><a href="javascript:;" target="_blank">头像<span>+</span></a>
+              <ul>
+                 <li><a href="http://tieba.baidu.com/p/4730204771?pn=3&traceid=" target="_blank">头像</a></li>
+                 <li><a href="http://www.gexing.com/qqtouxiang/5147115.html"target="_blank">QQ头像</a></li>
+              </ul>
+             </li>
+			 <li><a href="javascript:;" target="_blank">美图<span>+</span></a>
+              <ul>
+                 <li><a href="https://tieba.baidu.com/p/5182686709" target="_blank">美图</a></li>
+                 <li><a href="http://loftermeirenzhi.lofter.com/"target="_blank">美人志图片</a></li>
+				 <li><a href="http://weibo.com/p/100808d4fe3b56c7df48d4a872a1727cfe3e48"target="_blank">早安少女美图</a></li>
+				 <li><a href="http://www.lofter.com/selection?X-From-ISP=2&id=1171100&type=2&urschecked=true"target="_blank">你也能拍好日系空气感少女写真</a></li>
+              </ul>
+             </li>
+		 </ol>
       </div>
 	  
   </div>
   <script>
-      $(function(){
-	      $(".hidden").each(function(){
+    $(function(){
+	    $(".hidden").each(function(){
 		      $(this).click(function(){
 			     if($(this).parent().next().is(":visible")){
 					  $(this).parent().next().hide("slow");	 
@@ -130,19 +162,39 @@
 					  $(this).text("隐藏/显示");
 				 }
 			  })
-		  })
-       /*收藏链接总数*/
-        var a =$("li").length;
-	var b = 130;
-	$("#white").animate({ width: 0,left:"250px"}, 1000 ,function(){
+		  });
+		  
+		/*收藏链接总数*/
+        var a =$(".xinxin li").length;
+	    var b =$(".yueyue ul li").length;
+	    $("#white").animate({ width: 0,left:"250px"}, 1000 ,function(){
 		$("#vs").fadeIn("slow",function(){
-			$("#all").html(a+b);$("#aa").html(a);$("#bb").html("离击败月月大魔王还很遥远");
+			$("#all").html(a+b);$("#aa").html(a);$("#bb").html(b);
 			var newLeft = a/(a+b)*500-20 + "px"; //20为vs 的一半
 			$("#vs").animate({left:newLeft}, 1000);
 			$("#red").animate({width:newLeft}, 1000);
 		});
-	});
-	  })
+        });
+		
+	    /*言语相关两级菜单隐藏*/
+		var aspan = $(".yueyue span");
+		aspan.each(function(){
+		   $(this).click(function(){
+		      if($(this).parent().next().is(":visible")){
+			     $(this).parent().next().hide("slow");
+				 $(this).text("+");
+			  }else{
+			     $(this).parent().next().show("slow");
+				 $(this).text("-");
+			  }
+		   
+		   })
+		
+		})
+	
+	})
+	  
+	
   </script>
 </html>
 </body>
