@@ -7,14 +7,20 @@
 <body>
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <style type="text/css">
   *{margin:0;padding:0}
+  body{
+     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+     background-color:#fff;
+
+  }
   /* 主题 */
   .container{
       width:900px;
 	  height:800px;
 	  margin:0 auto;
-	  background-color:#e5eecc;
+	  /*background-color:#e5eecc;*/
   }
   
   /* 主要内容 */
@@ -43,6 +49,7 @@
   }
   .nav_list li a{
       text-decoration:none;
+      color:#222;
   }
   .nav_list li a:hover{
       text-decoration:underline;
@@ -54,6 +61,22 @@
 
 <body> 
   <div class="container">
+      <div class="bg-title">
+          <div id="box_bg">
+	<div id="container">
+		<div id="green" class="line"></div>
+		<div id="red" class="line"></div>
+		<div id="white" class="line"></div>
+		<div id="vs"></div>
+	</div>
+</div>
+
+       <div style="width:440px; margin:0px auto;">
+	 <div id="aa2" class="scope">收藏了<span id="aa"></span>条链接</div>
+	 <div id="bb2" class="scope"><span id="bb"></span></div>
+	  <!--<div id="all2" class="scope"><span id="all"></span></div>-->
+       </div> 
+      </div>
       <div class="list">
 	     <!--前端文章部分-->
 	     <div class="list_title">
@@ -78,18 +101,19 @@
 			 <li><a href="http://zh.wikihow.com/%E9%A6%96%E9%A1%B5" target="_blank">wikihow</a></li>
 			 <li><a href="http://www.onini.cn/11rozq3q" target="_blank">一号行天下－账号专卖店</a></li>
 			 <li><a href="http://www.51ym.me/User/Register.aspx" target="_blank">易码</a></li>
+                          <li><a href="http://www.qichacha.com/" target="_blank">企查查</a></li>
 		 </ol>
 	  
-                  <!--游戏相关-->
+                  <!--收藏相关-->
                   <div class="list_title">
-		     <h3>游戏相关</h3>
+		     <h3>收藏相关</h3>
 			 <span class="hidden">隐藏/显示</span>
 		 </div>
 		 <ol class="nav_list">
-		     <li><a href="#" target="_blank">我是如何学习计算机编程的</a></li>
-			 <li><a href="#" target="_blank">我是如何学习计算机编程的</a></li>
-			 <li><a href="#" target="_blank">我是如何学习计算机编程的</a></li>
-			 <li><a href="#" target="_blank">我是如何学习计算机编程的</a></li>
+		     <li><a href="http://www.360doc.com/content/16/0520/15/5320383_560730485.shtml" target="_blank">知乎上赞同最多的答案</a></li>
+			 <li><a href="https://www.wenjuan.com/lib_detail_full/5750016fa320fc8bf7ae9860" target="_blank">微信公众号问答模版</a></li>
+			 <li><a href="https://www.zhihu.com/question/35005800/answer/61498512" target="_blank">想要充实自己，有哪 10 本书或者 10 部电影值得推荐？</a></li>
+			 <li><a href="https://www.zhihu.com/question/28125763/answer/39526642" target="_blank">淘宝上有哪些神店</a></li>
 		 </ol>
       </div>
 	  
@@ -107,6 +131,17 @@
 				 }
 			  })
 		  })
+       /*收藏链接总数*/
+        var a =$("li").length;
+	var b = 130;
+	$("#white").animate({ width: 0,left:"250px"}, 1000 ,function(){
+		$("#vs").fadeIn("slow",function(){
+			$("#all").html(a+b);$("#aa").html(a);$("#bb").html("离击败月月大魔王还很遥远");
+			var newLeft = a/(a+b)*500-20 + "px"; //20为vs 的一半
+			$("#vs").animate({left:newLeft}, 1000);
+			$("#red").animate({width:newLeft}, 1000);
+		});
+	});
 	  })
   </script>
 </html>
