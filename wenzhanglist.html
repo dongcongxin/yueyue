@@ -64,6 +64,12 @@
 	  font-weight:bold;
 	  font-size:18px;
   }
+  .magic{
+      position:absolute;
+      top:50%;
+      left:50%;
+      display:none;
+  }
 </style>
 <script src="lib/jquery/dist/jquery.min.js">
 </script>
@@ -100,6 +106,7 @@
 			 <li><a href="http://www.cnblogs.com/aaronjs/articles/2167431.html" target="_blank">执行环境，作用域--艾伦博客</a></li>
              <li><a href="https://www.zhihu.com/question/19651401" target="_blank">学习JavaScript，有哪些好的博客或者网站推荐？</a></li>
              <li><a href="https://zhuanlan.zhihu.com/p/20677058" target="_blank">我的编程生涯里启发我的15本书</a></li>
+              <li><a href="https://juejin.im/post/5a1af88f5188254a701ec230" target="_blank">掘金社区</a></li>
 		 </ol>
 		 <!--工作相关-->
 		 <div class="list_title">
@@ -114,7 +121,7 @@
              <li><a href="http://www.qichacha.com/" target="_blank">企查查</a></li>
 		 </ol>
 	  
-                  <!--收藏相关-->
+           <!--收藏相关-->
          <div class="list_title">
 		     <h3>收藏相关</h3>
 			 <span class="hidden">隐藏/显示</span>
@@ -132,23 +139,263 @@
 			 <span class="hidden">隐藏/显示</span>
 		 </div>
 		 <ol class="nav_list yueyue">
+                     <!-- 头像 -->
 		     <li><a href="javascript:;" target="_blank">头像<span>+</span></a>
               <ul>
                  <li><a href="http://tieba.baidu.com/p/4730204771?pn=3&traceid=" target="_blank">头像</a></li>
                  <li><a href="http://www.gexing.com/qqtouxiang/5147115.html"target="_blank">QQ头像</a></li>
               </ul>
              </li>
+                     <!-- 美图 -->
 			 <li><a href="javascript:;" target="_blank">美图<span>+</span></a>
               <ul>
                  <li><a href="https://tieba.baidu.com/p/5182686709" target="_blank">美图</a></li>
                  <li><a href="http://loftermeirenzhi.lofter.com/"target="_blank">美人志图片</a></li>
-				 <li><a href="http://weibo.com/p/100808d4fe3b56c7df48d4a872a1727cfe3e48"target="_blank">早安少女美图</a></li>
+				 <li><a href="http://weibo.com/p/100808d4fe3b56c7df48d4a872a1727cfe3e48" target="_blank">早安少女美图</a></li>
 				 <li><a href="http://www.lofter.com/selection?X-From-ISP=2&id=1171100&type=2&urschecked=true"target="_blank">你也能拍好日系空气感少女写真</a></li>
               </ul>
              </li>
+                    <!-- 表情 -->
+			 <li><a href="javascript:;" target="_blank">表情<span>+</span></a>
+              <ul>
+                 <li><a href="https://www.doutula.com/" target="_blank">斗图</a></li>
+                 <li><a href="https://tieba.baidu.com/p/4824768279?errno=3&errmsg=unknow%20error%28110001%29&stoken=&bduss=&ssnerror=0&traceid="target="_blank">突然系列1</a></li>
+				 <li><a href="https://zhidao.baidu.com/question/1672637098435513987.html"target="_blank">突然系列2</a></li>
+	             <li><a href="http://www.lofter.com/selection?X-From-ISP=2&id=1171100&type=2&urschecked=true"target="_blank">八路军小鬼子</a></li>
+                 <li><a href="http://www.qqtn.com/article/article_160621_1.html">突然系列表情包</a></li>
+                 <li><a href="http://sc.chinaz.com/biaoqing/160211083070.htm"target="_blank">猥琐猫一朵小花</a></li>
+                 <li><a href="http://www.3lian.com/gif/2016/01-26/112518.html"target="_blank">头上长出一朵小花</a></li>
+              </ul>
+             </li>
+                    <!-- 乱七八糟的图 -->
+			<li><a href="javascript:;" target="_blank">杂图<span>+</span></a>
+              <ul>
+                 <li><a href="https://mp.weixin.qq.com/s/HpnKfpv9Bmm7IgIQNpzSRw" target="_blank">脑洞</a></li>
+                 <li><a href="https://tieba.baidu.com/p/3323300169"target="_blank">网名</a></li>
+				 <li><a href="http://www.zhongleyy.cn/"target="_blank">中乐影音</a></li>
+	             <li><a href="https://tieba.baidu.com/p/4938644164"target="_blank">36部香港经典</a></li>
+                 <li><a href="https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_15190010906937015837%22%7D">HE BE是什么意思-百度知道</a></li>
+                 <li><a href="https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_15190010906937015837%22%7D"target="_blank">手残剪坏刘海竟然爆红时尚圈</a></li>
+                 <li><a href="http://www.ijianji.com/article/jianjishipin.htm"target="_blank">如何快速剪辑视频-爱剪辑在线教程</a></li>
+                 <li><a href="https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_3108551335702389912%22%7D"target="_blank">不用美颜,不靠修图,这位网红一张自拍就让你湿回家</a></li>
+                 <li><a href="http://tieba.baidu.com/p/3677456788#66480848433l"target="_blank">【春风又绿江南岸】图剧《龙葵历险记已火热开播》-百度贴吧</a></li>
+              </ul>
+             </li>
+                  <!-- 穿衣搭配 -->
+			<li><a href="javascript:;" target="_blank">穿衣<span>+</span></a>
+              <ul>
+                 <li><a href="https://www.baidu.com/home/news/data/newspage?nid=14767774458770977492&n_type=0&p_from=1" target="_blank">男生品搭配</a></li>
+                 <li><a href="http://www.7y7.com/zhubao/85/279885.html"target="_blank">平底鞋穿搭-平底鞋街拍</a></li>
+				 <li><a href="https://www.zhihu.com/question/35931586"target="_blank">你的日常搭配是什么-知乎</a></li>
+	             <li><a href="http://s.weibo.com/weibo/%25E7%25BE%25BD%25E7%25BB%2592%25E6%259C%258D%25E6%2590%25AD%25E9%2585%258D%25E5%2585%25AB%25E5%2588%2586%25E8%25A3%25A4%2520%25E9%259C%25B2%25E8%2584%259A%25E8%25B8%259D?topnav=1&wvr=6&Refer=top_hot"target="_blank">微博搜索-羽绒服搭配八分裤-露脚裸-微博</a></li>
+              </ul>
+             </li>
+                   <!-- 知乎收藏 -->
+			<li><a href="javascript:;" target="_blank">知乎<span>+</span></a>
+              <ul>
+                 <li><a href="https://www.zhihu.com/question/22243440" target="_blank">为什么很少有人讨厌胡歌-知乎</a></li>
+                 <li><a href="https://www.zhihu.com/question/38865339"target="_blank">前端的美工们经常去那些网站找素材-知乎</a></li>
+				 <li><a href="https://zhuanlan.zhihu.com/p/26468738"target="_blank">如何给身材或长相一般的女生拍写真-知乎</a></li>
+	             <li><a href="https://www.zhihu.com/question/62510350"target="_blank">闪光少女中有哪些值得注意的细节</a></li>
+                 <li><a href="https://www.zhihu.com/question/26995490"target="_blank">每天对着电脑工作12小时的女生要怎么保养</a></li>
+                 <li><a href="https://www.zhihu.com/question/46313733"target="_blank">被抓进精神病院如何澄清自己不是精神病患者</a></li>
+              </ul>
+             </li>
+                   <!--没有二级菜单的链接--->
+	             <li><a href="http://zuimeia.com/" target="_blank">最美应用</a></li>
+                 <li><a href="http://www.ituring.com.cn/" target="_blank">图灵社区</a></li>
+                 <li><a href="http://www.gifmiao.com/?f=2" target="_blank">表情包制作</a></li>
+                 <li><a href="http://www.piggif.com/" target="_blank">小猪动图制作</a></li>
+                 <li><a href="http://www.qt86.com/" target="_blank">艺术字转换器</a></li>
+                 <li><a href="http://www.akuziti.com/" target="_blank">艺术字体转换器</a></li>
+                 <li><a href="http://www.360doc.com/content/16/1026/12/34624569_601474728.shtml" target="_blank">咪蒙所有的文章都在这里</a></li>
+		 </ol>
+		        <!--官网大全-->
+         <div class="list_title">
+		     <h3>官网大全</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+	             <li><a href="https://guanwangdaquan.com/freerangestock%e5%ae%98%e7%bd%91/" target="_blank">官网大全</a></li>
+                 <li><a href="https://mp.weixin.qq.com/" target="_blank">微信登录</a></li>
+				 <li><a href="http://weixin.sogou.com/" target="_blank">微信搜索</a></li>
+		 </ol>
+		       <!--微信编辑-->
+         <div class="list_title">
+		     <h3>微信编辑</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+	             <li><a href="http://bj.96weixin.com/" target="_blank">96</a></li>
+                 <li><a href="http://www.135editor.com/" target="_blank">135</a></li>
+				 <li><a href="http://www.wxeditor.com/" target="_blank">易点</a></li>
+				 <li><a href="http://xiumi.us/studio/v5#/paper/for/new" target="_blank">秀米</a></li>
+				 <li><a href="http://ipaiban.com/bianji.jsp" target="_blank">i排版</a></li>
+				 <li><a href="http://www.xmyeditor.com/" target="_blank">小蚂蚁</a></li>
+			     <li><a href="http://xiudodo.com/?m=graphic#/for/new" target="_blank">秀多多</a></li>
+			     <li><a href="http://www.videaba.com/" target="_blank">微助点</a></li>
+			     <li><a href="http://editor.fzn.cc/" target="_blank">非找你</a></li>
+				 <li><a href="https://xiumi.us/studio/v5#/tablet/for/new" target="_blank">秀米图文秀</a></li>
+		 </ol>
+		       <!--微信编辑-->
+         <div class="list_title">
+		     <h3>问卷工具</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                  <!--没有二级菜单的链接--->
+	             <li><a href="https://www.sojump.com/" target="_blank">问卷星</a></li>
+                 <li><a href="http://www.mikecrm.com/" target="_blank">麦客问卷</a></li>
+				 <li><a href="https://jinshuju.net/" target="_blank">金数据问卷</a></li>
+				 <li><a href="https://www.wenjuan.com/" target="_blank">问卷网工具</a></li>
+		 </ol>
+		      <!--运营-->
+         <div class="list_title">
+		     <h3>运营工具</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+	             <li><a href="http://gz.xiaoi.com/" target="_blank">微信机器人</a></li>
+                 <li><a href="http://www.xiguaji.com/" target="_blank">西瓜助手素材</a></li>
+				 <li><a href="http://www.aiweibang.com/" target="_blank">微信运营好帮手</a></li>
+				 <li><a href="http://www.wxb.com/home#!/index" target="_blank">微小宝公众号助手</a></li>
+				 <li><a href="https://yiban.io/datas/overview_new" target="_blank">数据中心-壹伴</a></li>
+		 </ol>
+		     <!--图片素材-->
+         <div class="list_title">
+		     <h3>图片素材</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+	             <li><a href="https://www.duitang.com/" target="_blank">堆糖</a></li>
+                 <li><a href="http://old.zcool.com.cn/" target="_blank">站酷</a></li>
+				 <li><a href="http://699pic.com/" target="_blank">摄图</a></li>
+				 <li><a href="https://www.chuangkit.com/startDesign" target="_blank">创客贴</a></li>
+				 <li><a href="http://huaban.com/" target="_blank">花瓣网</a></li>
+				 <li><a href="http://www.juimg.com/" target="_blank">聚图网</a></li>
+				 <li><a href="http://www.1tu.com/" target="_blank">壹图网</a></li>
+				 <li><a href="http://www.360youtu.com/" target="_blank">有图网</a></li>
+			     <li><a href="http://588ku.com/?h=bd" target="_blank">千库网</a></li>
+			     <li><a href="http://ibaotu.com/?sign=1697#fine" target="_blank">包图网</a></li>
+			     <li><a href="http://www.fhdq.net/" target="_blank">符号大全</a></li>
+			     <li><a href="http://www.tuhaokuai.com/image" target="_blank">图片压缩</a></li>
+				 <li><a href="https://canvas.xmt.cn/" target="_blank">图片编辑器</a></li>
+				 <li><a href="http://xiudodo.com/" target="_blank">微信配图素材</a></li>
+				 <li><a href="http://www.eqxiu.com/" target="_blank">H5页面制作工具</a></li>
+				 <li><a href="http://store.eqxiu.com/cats-2.html" target="_blank">易企秀免费模版</a></li>
+				 <li><a href="https://dribbble.com/Madebyelvis" target="_blank">MBE Dribbble </a></li>
+				 <li><a href="https://alpha.wallhaven.cc/" target="_blank">壁纸wallhaven </a></li>
+				 <li><a href="http://www.lifeofpix.com/about/" target="_blank">关于生活的pic  </a></li>
+				 <li><a href=" http://www.soogif.com/" target="_blank">SOOGIF动图制作</a></li>
+				 <li><a href=" https://www.pexels.com/" target="_blank">免费照片·Pexels </a></li>
+				 <li><a href=" https://500px.com/" target="_blank">最出色的摄影社区 </a></li>
+				 <li><a href="https://www.pixiv.net/" target="_blank">插画交流网站[pixiv] </a></li>
+				 <li><a href="http://www.doyoudo.com/resources" target="_blank">资源导航 | doyoudo</a></li>
+				 <li><a href=" https://dribbble.com/" target="_blank">提高运营审美 </a></li>
+				 <li><a href=" http://www.publicdomainpictures.net/" target="_blank">公共领域的图片 - 照片 </a></li>
+				 <li><a href="https://picjumbo.com/" target="_blank">1500免费照片• </a></li>
+				 <li><a href="http://699pic.com/best.html?sourcefrom=10" target="_blank">摄影图片_摄影图片免费下载_摄图网 </a></li>
+				 <li><a href="https://www.howtostartanllc.org/free-stock-photos/" target="_blank">免费照片小企业|如何开始一个llc.org</a></li>
+				 <li><a href="http://www.gratisography.com/" target="_blank">gratisography：免费的高分辨率照片</a></li>
+				 <li><a href="http://photopin.com/" target="_blank">photopin -博客免费照片通过创作共享 </a></li>
+				 <li><a href="https://www.zhihu.com/question/21757507" target="_blank">你平时在哪找免费的可商业使用的图片素材</a></li>
+				 <li><a href="https://unsplash.com/" target="_blank">Unsplash | Beautiful Free Photo Community </a></li>
+				 <li><a href="http://www.lifeofpix.com/" target="_blank">Free high resolution photography - Life of Pix - Home </a></li>
+				 <li><a href="https://www.splitshire.com/" target="_blank">SplitShire - Free Stock Photos - SplitShire - Free Stock Photos & Videos</a></li>
+				 <li><a href="https://freerangestock.com/" target="_blank">Freerange Stock | Free Stock Photos - Totally Free Commercial Photography and </a></li>
+		 </ol>
+		     <!--微信素材-->
+         <div class="list_title">
+		     <h3>微信素材</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+	             <li><a href="https://article.xmt.cn/#/wechat" target="_blank">热点中心</a></li>
+                 <li><a href="https://article.xmt.cn/#/headLines" target="_blank">热点中心</a></li>
+				 <li><a href="http://www.tspsy.com/xljb/list_5_23.html" target="_blank">心理疾病</a></li>
+ <li><a href="http://www.qq.com/" target="_blank">腾讯首页</a></li>
+ <li><a href="http://www.myzaker.com/" target="_blank">ZAKER新闻</a></li>
+ <li><a href="http://hn.qq.com/?qq=0&pt_src=3&ADUIN=2415336156&ADSESSION=1501822559&ADTAG=CLIENT.QQ.5533_.0&ADPUBNO=26719" target="_blank">腾讯：大湘网</a></li>
+ <li><a href="http://hb.qq.com/" target="_blank">腾讯：大楚网</a></li>
+		 </ol>
+		   <!--识图工具-->
+         <div class="list_title">
+		     <h3>识图工具</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+	             <li><a href="http://image.baidu.com/?fr=shitu" target="_blank">百度识图</a></li>
+                 <li><a href="http://st.so.com/" target="_blank">360识图</a></li>
+				 <li><a href="http://pic.sogou.com/" target="_blank">搜狗识图</a></li>
+		 </ol>
+		   <!--工作工具-->
+         <div class="list_title">
+		     <h3>工作工具</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+	             <li><a href="http://www.51ym.me/User/Login.aspx?url=http://www.51ym.me/User/MobileSMSCode.aspx" target="_blank">易码</a></li>
+                 <li><a href="http://www.yzm7.com/" target="_blank">云码</a></li>
+				 <li><a href="https://www.wang1314.com/doc/alert_info.jsp?alertMessage=page.login.no" target="_blank">好网角</a></li>
+				 <li><a href="http://ziyuan.baidu.com/inbound/index" target="_blank">链接分析</a></li>
+				 <li><a href="http://p.haoii123.com/" target="_blank">在线排版</a></li>
+				 <li><a href="https://ssl.zc.qq.com/v3/index-chs.html" target="_blank">QQ注册</a></li>
+				 <li><a href="http://www.link114.cn/" target="_blank">买链帮手</a></li>
+				 <li><a href="http://www.5118.com/" target="_blank">挖掘工具</a></li>
+				 <li><a href="http://tool.chinaz.com/" target="_blank">站长工具</a></li>
+				 <li><a href="http://www.jiuzheer.cc/" target="_blank">收录查询</a></li>
+				 <li><a href="http://www.jiuzheer.cc/" target="_blank">排名查询</a></li>
+				 <li><a href="https://www.macworld.com/article/2887279/clipboard-managers-for-mac.html" target="_blank">剪切板推荐</a></li>
+				 <li><a href="https://zh.majestic.com/reports/site-explorer" target="_blank">站点浏览器</a></li>
+				 <li><a href="https://zh.majestic.com/reports/site-explorer" target="_blank">标题生成器</a></li>
+				 <li><a href="https://github.com/XX-net/XX-Net/blob/master/code/default/download.md" target="_blank">免费翻墙软件</a></li>
+				 <li><a href="http://tool.oschina.net/encode?type=4" target="_blank">在线编码转换</a></li>
+				 <li><a href="http://www.wzdr.cc/" target="_blank">营销神器官网</a></li>
+				 <li><a href="https://0x3.me/?utm_source=baidu&utm_medium=cpc&utm_campaign=bdpromote" target="_blank">Ox3.me 短网址</a></li>
+				 <li><a href="http://tool.chinaz.com/Tools/Density.aspx" target="_blank">关键字密度检测</a></li>
+				 <li><a href="http://baijiahao.baidu.com/s?id=1575249427325535" target="_blank">高手都在用的引流技巧</a></li>
+				 <li><a href="https://www.zhihu.com/question/27195019" target="_blank">怎样做一个成功的标题党?</a></li>
+				 <li><a href="https://www.jsdati.com/" target="_blank">联众打码</a></li>
+		 </ol>
+		   <!--制作二维码/GIF-->
+         <div class="list_title">
+		     <h3>制作二维码/GIF</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+				 <li><a href="http://www.asqql.com/qqtp/" target="_blank">gif图片</a></li>
+				 <li><a href="http://www.2weima.com/" target="_blank">二维工坊</a></li>
+				 <li><a href="http://www.9thws.com/" target="_blank">第九工场</a></li>
+				 <li><a href="http://www.imayan.net/" target="_blank">码眼无界</a></li>
+				 <li><a href="http://www.wwei.cn/" target="_blank">微微二维码</a></li>
+				 <li><a href="https://mh.cli.im/" target="_blank">草料二维码</a></li>
+				 <li><a href="http://www.videaba.com/index.php/home/tools#" target="_blank">指纹二维码</a></li>
+				 <li><a href="https://cli.im/" target="_blank">二维码美化生成器</a></li>
+				 <li><a href="https://ezgif.com/video-to-gif" target="_blank">视频转换为GIF动画</a></li>
+		 </ol>
+		   <!--微信编辑要点-->
+         <div class="list_title">
+		     <h3>识图工具</h3>
+			 <span class="hidden">隐藏/显示</span>
+		 </div>
+		 <ol class="nav_list yueyue">
+                   <!--没有二级菜单的链接--->
+	             <li><a href="http://tool.oschina.net/encode?type=4" target="_blank">微信排版</a></li>
+                 <li><a href="https://www.zhihu.com/question/30770510" target="_blank">好用的编辑器</a></li>
+				 <li><a href="https://www.zhihu.com/question/27580103" target="_blank">让微排版变得高大上</a></li>
 		 </ol>
       </div>
 	  
+  </div>
+  <div class="showText">
   </div>
   <script>
     $(function(){
@@ -166,13 +413,14 @@
 		  
 		/*收藏链接总数*/
         var a =$(".xinxin li").length;
-	    var b =$(".yueyue ul li").length;
+	    var b =$(".yueyue li").length-$(".yueyue li ul").length;
 	    $("#white").animate({ width: 0,left:"250px"}, 1000 ,function(){
 		$("#vs").fadeIn("slow",function(){
 			$("#all").html(a+b);$("#aa").html(a);$("#bb").html(b);
 			var newLeft = a/(a+b)*500-20 + "px"; //20为vs 的一半
 			$("#vs").animate({left:newLeft}, 1000);
 			$("#red").animate({width:newLeft}, 1000);
+                       
 		});
         });
 		
@@ -181,10 +429,10 @@
 		aspan.each(function(){
 		   $(this).click(function(){
 		      if($(this).parent().next().is(":visible")){
-			     $(this).parent().next().hide("slow");
+			     $(this).parent().next().hide('slow');
 				 $(this).text("+");
 			  }else{
-			     $(this).parent().next().show("slow");
+			     $(this).parent().next().show('slow');
 				 $(this).text("-");
 			  }
 		   
@@ -194,7 +442,6 @@
 	
 	})
 	  
-	
   </script>
 </html>
 </body>
