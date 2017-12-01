@@ -71,6 +71,21 @@
       left:50%;
       display:none;
   }
+  
+  #footer{width:100%;height:100px;background:#393b38;position:fixed;bottom:0;box-sizing:border-box;display:none}
+		.footerl{height:50px;display:flex;align-items: center}
+		.footerl ul{display:flex;justify-content:space-between;padding:0 50px;width:100%;}
+		.footerl ul li{width:35px;height:35px;border:1px solid #fff;text-align: center;line-height:35px;border-radius:5px;}
+		.footerl ul li a{color:#fff;}
+		.footera{height:50px;display:flex;align-items: center}
+		.footera ul{display:flex;justify-content:space-between;padding:0 30px;width:100%;}
+		.footera ul li{width:30px;height:30px;background:red;border-radius:5px;}
+		.footera ul li:nth-of-type(1){background:#fff}
+		.footera ul li:nth-of-type(2){background:#d4c8ba}
+		.footera ul li:nth-of-type(3){background:#c7b07e}
+		.footera ul li:nth-of-type(4){background:#94c198}
+		.footera ul li:nth-of-type(5){background:#2b4c6b}
+		.footera ul li:nth-of-type(6){background:#5e4a43}
 </style>
 <script src="lib/jquery/dist/jquery.min.js">
 </script>
@@ -435,7 +450,26 @@
 	<br/><br/>
   </div>
 
-
+<div id="footer">
+		<div class="footerl">
+			<ul class="js-ul1">
+				<li id="js-li1"><a href="javascript:">A+</a></li>
+				<li id="js-li2"><a href="javascript:">16</a></li>
+				<li id="js-li3"><a href="javascript:">A-</a></li>
+			</ul>
+		</div>
+		<div class="footera">
+			<ul class="js-ul2">
+				<li><a href="javascript:"></a></li>
+				<li><a href="javascript:"></a></li>
+				<li><a href="javascript:"></a></li>
+				<li><a href="javascript:"></a></li>
+				<li><a href="javascript:"></a></li>
+				<li><a href="javascript:"></a></li>
+			</ul>
+		</div>
+		
+	</div>
  
   <script>
     $(function(){
@@ -483,6 +517,7 @@
 	})
 	  
   </script>
+  <script src="js/toggles.js"></script>
 </html>
 </body>
 </html>

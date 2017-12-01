@@ -50,21 +50,21 @@
             },
             tooltip: {},
             legend: {
-                data:["早餐价格","午饭价格","晚饭价格"]
+                data:["上月价格","本月价格","晚饭价格"]
             },
             xAxis: {
                 data: ["刘总","飞哥","小阳","小董"]
             },
             yAxis: {},
             series: [{
-                name: '早餐价格',
+                name: '上月价格',
                 type: 'bar',
-                data: [6, 25, 4, 13.5]
+                data: [39, 53.5, 76, 82]
             },
 			{
-                name: '午饭价格',
+                name: '本月价格',
                 type: 'bar',
-                data: [15, 34, 15, 0]
+                data: [5, 3, 67, 30]
             },
 			{
                 name: '晚饭价格',
@@ -124,10 +124,10 @@
             radius : '55%',
             center: ['50%', '50%'],
             data:[
-                {value:15, name:'刘总'},
-                {value:34, name:'飞哥'},
-                {value:15, name:'小阳'},
-                {value:0, name:'小董'},
+                {value:5, name:'刘总'},
+                {value:0, name:'飞哥'},
+                {value:4, name:'小阳'},
+                {value:30, name:'小董'},
             ]
         }
     ]
@@ -147,10 +147,10 @@ var vm = new Vue({
     el:"#app",
 	data:{
 	  sites:[
-	     {"name":"刘总","breakfast":"公交早饭6块","lunch":"15","dinner":"0",},
-             {"name":"飞哥","breakfast":"地铁早餐-两份混沌 两个包子 两个鸡蛋25块","lunch":"34","dinner":"0",},
-	     {"name":"小阳","breakfast":"4块","lunch":"15","dinner":"0",},
-             {"name":"小董","breakfast":"荷包蛋13.5块","lunch":"0","dinner":"0",}
+	     {"name":"刘总","breakfast":"早饭5块","lunch":"0","dinner":"0",},
+             {"name":"飞哥","breakfast":"0","lunch":"0","dinner":"0",},
+	     {"name":"小阳","breakfast":"0","lunch":"0","dinner":"0",},
+             {"name":"小董","breakfast":"30","lunch":"0","dinner":"0",}
 	  ]
 	}
 })
