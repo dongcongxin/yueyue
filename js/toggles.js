@@ -1,6 +1,6 @@
 function Page(){
 
-		}
+}
 		Page.prototype = {
 			constructor:Page,
 			init:function(){
@@ -12,6 +12,11 @@ function Page(){
 			showHide:function(){
 				$("h3").on("click",function(){
 				$("#footer").toggle();
+				$(".bg-title").hide();
+				$(".rolling").css({
+					"margin-top":"40px",
+					"font-size":"14px"	
+				})
 				})
 			},
 			fontSize:function(){
