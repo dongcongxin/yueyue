@@ -39,6 +39,7 @@
   .list_title span:hover{
       cursor:pointer;
   }
+  .list
   /* 收藏的链接 */
   .nav_list li{
       margin:10px 0 0 57px;
@@ -124,6 +125,7 @@
 	     <div class="list_title">
 		     <h3>前端文章</h3>
 			 <span class="hidden">隐藏/显示</span>
+			 <span class="close">一键关闭</span>
 		 </div>
 		 <ol class="nav_list xinxin">
 		     <li><a href="http://www.chinaz.com/news/2011/1017/213987.shtml" target="_blank">我是如何学习计算机编程的</a></li>
@@ -485,7 +487,8 @@
 	$(function(){
 	   change(".hidden","隐藏/显示","显示/隐藏");
 	   change(".yueyue span","+","-"); 
-       collection();	   
+       collection();	
+       close();	   
 	})
 	 // 显示与隐藏
 	 function change(ele,showText, hideText){
@@ -512,8 +515,20 @@
 			$("#vs").animate({left:newLeft}, 1000);
 			$("#red").animate({width:newLeft}, 1000);             
 		});
-        });
+        })
 	}
+	// 一键关闭和一键开启功能
+     function close(){ 
+	   $(".close").click(function(){
+		  if($(".close").text().match("一键关闭")){
+		      $(".nav_list").hide("slow"); 
+			  $(this).text("一键开启");
+		  }else{
+		      $(".nav_list").show("slow");
+			  $(this).text("一键关闭");
+		  }
+	   })
+	 }
   </script>
   
   <script src="js/toggles.js"></script>
