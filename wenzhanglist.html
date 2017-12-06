@@ -39,7 +39,12 @@
   .list_title span:hover{
       cursor:pointer;
   }
-  .list
+  #music_btn{
+      position:relative;
+	  top:-28px;
+	  left:-270px;
+  
+  }
   /* 收藏的链接 */
   .nav_list li{
       margin:10px 0 0 57px;
@@ -119,14 +124,19 @@
 	    </div> 
     </div>
 	<!--滚动条部分-->
-	<MARQUEE class="rolling" scrollAmount=2 direction=right>本页面收藏了大量漆月的链接。可用于工作和学习 如果发现链接有误请反馈邮箱地址：1414423031@qq.com,也可以点击以下QQ与我在线联系</MARQUEE>
+	<MARQUEE class="rolling" scrollAmount=2 direction=right>111本页面收藏了大量漆月的链接。可用于工作和学习 如果发现链接有误请反馈邮箱地址：1414423031@qq.com,也可以点击以下QQ与我在线联系</MARQUEE>
       <div class="list">
 	     <!--前端文章部分-->
+		   <!--背景音乐部分-->
 		 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1414423031&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1414423031:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
 	     <div class="list_title">
 		     <h3>前端文章</h3>
 			 <span class="hidden">隐藏/显示</span>
 			 <span class="close">一键关闭</span>
+			 <div class="audio">
+			    <audio id="music" src="music/唐汉霄 - 让我留在你身边 (原唱作版).mp3" autoplay="autoplay" loop="loop">你的浏览器不支持audio标签。</audio>
+		        <a id="audio_btn"><img src="images/play.gif" width="28" height="30" id="music_btn" border="0"></a><br>
+			 </div>
 		 </div>
 		 <ol class="nav_list xinxin">
 		     <li><a href="http://www.chinaz.com/news/2011/1017/213987.shtml" target="_blank">我是如何学习计算机编程的</a></li>
@@ -490,7 +500,8 @@
 	   change(".hidden","隐藏/显示","显示/隐藏");
 	   change(".yueyue span","+","-"); 
        collection();	
-       close();	   
+       close();	 
+     
 	})
 	 // 显示与隐藏
 	 function change(ele,showText, hideText){
@@ -531,7 +542,21 @@
 		  }
 	   })
 	 }
-	 //测试
+	// 背景音乐部分
+	 function playMusic(){
+	   $("#music_btn").click(function(){
+		  var music = document.getElementById("music");
+		   if(music.paused){
+			 music.play();
+			 $("#music_btn").attr("src","images/play.gif");
+		   }else{
+			  music.pause();
+			 $("#music_btn").attr("src","images/pause.gif");
+		  }
+	   })
+	}
+	
+  playMusic();	   
   </script>
   
   <script src="js/toggles.js"></script>
