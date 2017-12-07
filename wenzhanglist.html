@@ -8,15 +8,23 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <style type="text/css">
-@media(max-width:960px)
+@media(max-width:400px)
 {
   /*网页全屏显示*/
   body{width:100%;}  
   /*正文内容全屏显示*/
   .list{width:100%;}
   /* 为了避免正文图片超出屏幕宽度 */
-  * 正文图片宽度最多是屏幕宽度的90%*/
-  #box_bg,#vs,#green,#red,#white{max-width:90%} 
+  .bg-title{display:none}
+  /*让滚动条向下一点*/
+  .rolling{display:none}
+  .nav_list li{
+   width:319px;
+     margin:3px 0 0 10px !important;
+     line-height:1.8;
+	 border:1px solid red;
+	
+  }
 }
   *{margin:0;padding:0}
   body{
@@ -58,6 +66,7 @@
 	  left:-270px;
   
   }
+  /*移动端头部*/
   /* 收藏的链接 */
   .nav_list li{
       margin:10px 0 0 57px;
@@ -147,7 +156,7 @@
 			 <span class="hidden">隐藏/显示</span>
 			 <span class="close">一键关闭</span>
 			 <div class="audio">
-			    <audio id="music" src="music/唐汉霄 - 让我留在你身边 (原唱作版).mp3" autoplay="autoplay" loop="loop">你的浏览器不支持audio标签。</audio>
+			    <audio id="music" src="music1/唐汉霄 - 让我留在你身边 (原唱作版).mp3" autoplay="autoplay" loop="loop">你的浏览器不支持audio标签。</audio>
 		        <a id="audio_btn"><img src="images/play.gif" width="28" height="30" id="music_btn" border="0"></a><br>
 			 </div>
 		 </div>
@@ -573,6 +582,6 @@
   playMusic();	   
   </script>
   
-  <script src="js/toggles.js"></script>
+  <script src="js/toggles1.js"></script>
 </body>
 </html>
