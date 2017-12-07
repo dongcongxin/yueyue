@@ -8,6 +8,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <style type="text/css">
+@media(max-width:960px)
+{
+  /*网页全屏显示*/
+  body{width:100%;}  
+  /*正文内容全屏显示*/
+  .list{width:100%;}
+  /* 为了避免正文图片超出屏幕宽度 */
+  * 正文图片宽度最多是屏幕宽度的90%*/
+  #box_bg,#vs,#green,#red,#white{max-width:90%} 
+}
   *{margin:0;padding:0}
   body{
      font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -150,6 +160,7 @@
              <li><a href="https://zhuanlan.zhihu.com/p/20677058" target="_blank">我的编程生涯里启发我的15本书</a></li>
              <li><a href="https://juejin.im/post/5a1af88f5188254a701ec230" target="_blank">掘金社区</a></li>
 			 <li><a href="http://open.chrome.360.cn/extension_dev/overview.html" target="_blank">编写浏览器插件文档</a></li>
+			 <li><a href="http://www.webkaka.com/blog/archives/how-to-modify-a-web-page-to-be-responsive.html">一天完成把PC网站改为自适应！原来这么简单！</a></li>
 		 </ol>
 		 <!--工作相关-->
 		 <div class="list_title">
