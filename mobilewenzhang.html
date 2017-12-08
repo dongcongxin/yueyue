@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>平常收藏的链接</title>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-transform" /> 
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<style type="text/css">
+  *{margin:0;padding:0}
+  body{
+     background:#ecf0f1;
+	 font-family: "Microsoft YaHei", 宋体, "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo; 
+  }
+  .container{
+     width:100%;
+     margin:0px auto;
+  }
+  .nav_list li{
+     width:100%;
+	 height:60px;
+	 line-height:60px;
+	 border:1px solid #ddd;
+	 list-style:none;
+	 text-indent:40px;
+	 color:#217dbb;
+	 background:#fff;
+  }
+  .nav_list li a{
+     display:block;
+  }
+  .nav_list li a i{
+     padding-right:11px;
+	 margin-left:-38px;
+  }
+  .active{
+     background:#217dbb;
+	 color:#fff;
+  }
+</style>
+<script src="lib/vue/vue.js"></script>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+</head>
+<body> 
+  <div id="app" class="container">
+    <ul class="nav_list">
+	   <li v-for="(item,index) in items" v-html="item.name">
+	   </li>
+	</ul>
+  </div>
+  <script>
+  new Vue({
+     el:"#app",
+	 data:{
+	   items:[
+	      {name:"<a data-label='Everyting' href='#' class='active'><i class='fa fa-suitcase'></i>前端文章</a>"},
+		  {name:"<a data-label='Design' href='#'><i class='fa fa-magic'></i>工作相关</a>"},
+		  {name:"<a data-label='UI-UX' href='#'><i class='fa fa-bolt'></i>收藏相关</a>"},
+		  {name:"<a data-label='Print' href='#'><i class='fa fa-tint'></i>言语相关</a>"},
+		  {name:"<a data-label='Photography' href='#'><i class='fa fa-camera-retro'></i>照片相关</a>"},
+	   ]
+	 
+	 }
+  })
+  </script>
+  <script>
+  $(function(){
+     $("li").each(function(){
+	    $("li").click(function(){
+		    if(!$(this).children('a').hasClass("active")){
+			    $(this).children('a').addClass("active"); 
+			}else{
+			    $(this).children("a").parent().siblings().children().removeClass("active");
+ 
+			}
+		})
+	 })
+  })
+  </script>
+</body>
+</html>
