@@ -5,78 +5,77 @@
 <meta charset="utf-8">
 <meta http-equiv="Cache-Control" content="no-transform" /> 
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
-<link rel="stylesheet" type="text/css" href="css/default.css">
 <style type="text/css">
-  *{margin:0;padding:0}
-  body{
-     background:#ecf0f1;
-	 font-family: "Microsoft YaHei", 宋体, "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo; 
-  }
-  .container{
-     width:100%;
-     margin:0px auto;
-  }
-  .nav_list li{
-     width:100%;
-	 height:60px;
-	 line-height:60px;
-	 border:1px solid #ddd;
-	 list-style:none;
-	 text-indent:40px;
-	 color:#217dbb;
-	 background:#fff;
-  }
-  .nav_list li a{
-     display:block;
-  }
-  .nav_list li a i{
-     padding-right:11px;
-	 margin-left:-38px;
-  }
-  .active{
-     background:#217dbb;
-	 color:#fff;
-  }
+   *{margin:0px;padding:0px}
+   #app{
+      width:100%;
+      margin:0 auto;
+   }
+   
+   .content h2{
+      border-bottom:1px solid #ddd;
+	  height:60px;
+	  line-height:60px;
+	  font-weight:normal;
+	  text-indent:20px;
+	  color:#258cd1;
+   }
+   
+   .content h2 i{
+      padding-right:5px;
+   
+   }
+   
+   .content ul li{
+      list-style:none;
+	  height:40px;
+	  line-height:40px;
+	  display:none;
+   }
+   
+   .active{
+      background:#258cd1;
+	  color:#FFF !important;
+   }
 </style>
 <script src="lib/vue/vue.js"></script>
 <script src="lib/jquery/dist/jquery.min.js"></script>
 </head>
 <body> 
-  <div id="app" class="container">
-    <ul class="nav_list">
-	   <li v-for="(item,index) in items" v-html="item.name">
-	   </li>
-	</ul>
+  <div id="app">
+    <div class="content" v-for="(item,index) in items">
+	  <h2 :class="item.colors"><i :class="item.style"></i>{{item.title}}</h2>
+	  <ul>
+	    <li>
+		   <a :href="item.href">{{item.text}}</a>
+		</li>
+	  </ul>
+	</div>
   </div>
+  
   <script>
   new Vue({
-     el:"#app",
-	 data:{
-	   items:[
-	      {name:"<a data-label='Everyting' href='#' class='active'><i class='fa fa-suitcase'></i>前端文章</a>"},
-		  {name:"<a data-label='Design' href='#'><i class='fa fa-magic'></i>工作相关</a>"},
-		  {name:"<a data-label='UI-UX' href='#'><i class='fa fa-bolt'></i>收藏相关</a>"},
-		  {name:"<a data-label='Print' href='#'><i class='fa fa-tint'></i>言语相关</a>"},
-		  {name:"<a data-label='Photography' href='#'><i class='fa fa-camera-retro'></i>照片相关</a>"},
-	   ]
-	 
-	 }
-  })
-  </script>
-  <script>
-  $(function(){
-     $("li").each(function(){
-	    $("li").click(function(){
-		    if(!$(this).children('a').hasClass("active")){
-			    $(this).children('a').addClass("active"); 
-			}else{
-			    $(this).children("a").parent().siblings().children().removeClass("active");
- 
-			}
-		})
-	 })
+    el:"#app",
+	data:{
+	  items:[
+	    {"colors":"active","title":"言语相关","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
+		{"title":"前端文章","style":"fa fa-magic","text":"我是言语我喜欢分享我的生活"},
+		{"title":" 工作相关","style":"fa fa-bolt ","text":"我是言语我喜欢分享我的生活"},
+		{"title":" 收藏相关","style":"fa fa-tint","text":"我是言语我喜欢分享我的生活"},
+		{"title":"言语相关","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
+		{"title":"官网相关","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
+		{"title":"微信编辑","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
+		{"title":"问卷工具","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
+		{"title":"运营工具","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
+	  
+	  ]
+	
+	
+	}
+  
+  
   })
   </script>
 </body>
