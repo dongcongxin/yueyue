@@ -7,8 +7,12 @@
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+<script src="js/fastclick.js"></script>
 <style type="text/css">
    *{margin:0px;padding:0px}
+   
+   a{text-decoration:none;color:#258cd1}
+   
    #app{
       width:100%;
       margin:0 auto;
@@ -28,41 +32,155 @@
    
    }
    
-   .content ul li{
-      list-style:none;
+   .content ol li{
 	  height:40px;
 	  line-height:40px;
-	  text-indent:20px;
+	  text-indent:40px;
+	  overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;  
    }
    
    .active{
       background:#258cd1;
 	  color:#FFF !important;
    }
+   /*按扭*/
+   .bottom{
+      padding-left:79%;
+   
+   }
+   ol{display:none}
 </style>
 <script src="lib/vue/vue.js"></script>
 <script src="lib/jquery/dist/jquery.min.js"></script>
 </head>
 <body> 
   <div id="app">
-    <div class="content" v-for="(item,index) in items">
-	  <h2 :class="item.colors"><i :class="item.style"></i>{{item.title}}</h2>
-	  <ul>
-	    <li>
-		   <a :href="item.href">{{item.text}}</a>
-		</li>
-	  </ul>
+    <!--言语相关-->
+    <div class="content">
+	  <h2 class="active"><i class="fa fa-suitcase"></i>言语相关</h2>
+	  <ol>
+	    <li><a href="#">我是言语我喜欢分享我的生活</a></li>
+		
+	  </ol>
+	</div>
+	 <!--前端文章-->
+	 <div class="content">
+	  <h2><i class="fa fa-magic"></i>前端文章</h2>
+	  <ol>
+	    <li><a href="#">我是言语我喜欢分享我的生活</a></li>
+		<li><a href="http://www.chinaz.com/news/2011/1017/213987.shtml" target="_blank">我是如何学习计算机编程的</a></li>
+		<li><a href="https://www.zhihu.com/question/46943112?sort=created" target="_blank">有哪些令人惊叹的javascript代码</a></li>
+		<li><a href="https://zhuanlan.zhihu.com/p/19796639?columnSlug=vczh-nichijou" target="_blank">如何成为牛逼的程序员-vczh</a></li>
+		<li><a href="http://www.cnblogs.com/aaronjs/articles/2167431.html" target="_blank">执行环境，作用域--艾伦博客</a></li>
+		<li><a href="https://www.zhihu.com/question/19651401" target="_blank">学习JavaScript，有哪些好的博客或者网站推荐？</a></li>
+		<li><a href="https://zhuanlan.zhihu.com/p/20677058" target="_blank">我的编程生涯里启发我的15本书</a></li>
+		<li><a href="https://juejin.im/post/5a1af88f5188254a701ec230" target="_blank">掘金社区</a></li>
+		<li><a href="http://open.chrome.360.cn/extension_dev/overview.html" target="_blank">编写浏览器插件文档</a></li>
+		<li><a href="http://www.webkaka.com/blog/archives/how-to-modify-a-web-page-to-be-responsive.html">一天完成把PC网站改为自适应！原来这么简单！</a></li>
+		<li><a href="http://blog.jobbole.com/78738/" target="_blank">各大互联网公司2014前端笔试面试题</a></li>
+		<li><a href="http://www.cnblogs.com/rubylouvre/archive/2009/11/20/1606470.html">jQuery源码-司徒正美</a></li>
+	  </ol>
+	</div>
+	 <!--工作相关-->
+	 <div class="content">
+	  <h2><i class="fa fa-bolt"></i> 工作相关</h2>
+	  <ol>
+	     <li><a href="https://www.zhihu.com/question/19599216" target="_blank">如何提高逻辑思维能力</a></li>
+		 <li><a href="http://zh.wikihow.com/%E9%A6%96%E9%A1%B5" target="_blank">wikihow</a></li>
+		 <li><a href="http://www.onini.cn/11rozq3q" target="_blank">一号行天下－账号专卖店</a></li>
+		 <li><a href="http://www.51ym.me/User/Register.aspx" target="_blank">易码</a></li>
+		 <li><a href="http://www.qichacha.com/" target="_blank">企查查</a></li>
+	  </ol>
+	</div>
+	 <!--收藏相关-->
+	 <div class="content">
+	  <h2><i class="fa fa-tint"></i> 收藏相关</h2>
+	  <ol>
+	     <li><a href="http://www.360doc.com/content/16/0520/15/5320383_560730485.shtml" target="_blank">知乎上赞同最多的答案</a></li>
+		 <li><a href="https://www.wenjuan.com/lib_detail_foll/5750016fa320fc8bf7ae9860" target="_blank">微信公众号问答模版</a></li>
+		 <li><a href="https://www.zhihu.com/question/35005800/answer/61498512" target="_blank">想要充实自己，有哪 10 本书或者 10 部电影值得推荐？</a></li>
+		 <li><a href="https://www.zhihu.com/question/28125763/answer/39526642" target="_blank">淘宝上有哪些神店</a></li>
+	  </ol>
+	</div>
+	 <!--官网大全-->
+	 <div class="content">
+	  <h2><i class="fa fa-magic"></i>官网大全</h2>
+	  <ol>
+	     <li><a href="https://guanwangdaquan.com/freerangestock%e5%ae%98%e7%bd%91/" target="_blank">官网大全</a></li>
+		 <li><a href="https://mp.weixin.qq.com/" target="_blank">微信登录</a></li>
+		 <li><a href="http://weixin.sogou.com/" target="_blank">微信搜索</a></li>
+	  </ol>
+	</div>
+	 <!--微信编辑-->
+	 <div class="content">
+	  <h2><i class="fa fa-magic"></i>微信编辑</h2>
+	  <ol>
+	     <li><a href="http://bj.96weixin.com/" target="_blank">96</a></li>
+		 <li><a href="http://www.135editor.com/" target="_blank">135</a></li>
+		 <li><a href="http://www.wxeditor.com/" target="_blank">易点</a></li>
+		 <li><a href="http://xiumi.us/studio/v5#/paper/for/new" target="_blank">秀米</a></li>
+		 <li><a href="http://ipaiban.com/bianji.jsp" target="_blank">i排版</a></li>
+		 <li><a href="http://www.xmyeditor.com/" target="_blank">小蚂蚁</a></li>
+		 <li><a href="http://xiudodo.com/?m=graphic#/for/new" target="_blank">秀多多</a></li>
+		 <li><a href="http://www.videaba.com/" target="_blank">微助点</a></li>
+		 <li><a href="http://editor.fzn.cc/" target="_blank">非找你</a></li>
+		 <li><a href="https://xiumi.us/studio/v5#/tablet/for/new" target="_blank">秀米图文秀</a></li>
+	  </ol>
+	</div>
+	<!--图片素材-->
+	 <div class="content">
+	  <h2><i class="fa fa-magic"></i>图片素材</h2>
+	  <ol>
+	     <li><a href="https://www.duitang.com/" target="_blank">堆糖</a></li>
+		 <li><a href="http://old.zcool.com.cn/" target="_blank">站酷</a></li>
+		 <li><a href="http://699pic.com/" target="_blank">摄图</a></li>
+		 <li><a href="https://www.chuangkit.com/startDesign" target="_blank">创客贴</a></li>
+		 <li><a href="http://huaban.com/" target="_blank">花瓣网</a></li>
+		 <li><a href="http://www.juimg.com/" target="_blank">聚图网</a></li>
+		 <li><a href="http://www.1tu.com/" target="_blank">壹图网</a></li>
+		 <li><a href="http://www.360youtu.com/" target="_blank">有图网</a></li>
+		 <li><a href="http://588ku.com/?h=bd" target="_blank">千库网</a></li>
+		 <li><a href="http://ibaotu.com/?sign=1697#fine" target="_blank">包图网</a></li>
+		 <li><a href="http://www.fhdq.net/" target="_blank">符号大全</a></li>
+		 <li><a href="http://www.tuhaokuai.com/image" target="_blank">图片压缩</a></li>
+		 <li><a href="https://canvas.xmt.cn/" target="_blank">图片编辑器</a></li>
+		 <li><a href="http://xiudodo.com/" target="_blank">微信配图素材</a></li>
+		 <li><a href="http://www.eqxiu.com/" target="_blank">H5页面制作工具</a></li>
+		 <li><a href="http://store.eqxiu.com/cats-2.html" target="_blank">易企秀免费模版</a></li>
+		 <li><a href="https://dribbble.com/Madebyelvis" target="_blank">MBE Dribbble </a></li>
+		 <li><a href="https://alpha.wallhaven.cc/" target="_blank">壁纸wallhaven </a></li>
+		 <li><a href="http://www.lifeofpix.com/about/" target="_blank">关于生活的pic  </a></li>
+		 <li><a href=" http://www.soogif.com/" target="_blank">SOOGIF动图制作</a></li>
+		 <li><a href=" https://www.pexels.com/" target="_blank">免费照片·Pexels </a></li>
+		 <li><a href=" https://500px.com/" target="_blank">最出色的摄影社区 </a></li>
+		 <li><a href="https://www.pixiv.net/" target="_blank">插画交流网站[pixiv] </a></li>
+		 <li><a href="http://www.doyoudo.com/resources" target="_blank">资源导航 | doyoudo</a></li>
+		 <li><a href=" https://dribbble.com/" target="_blank">提高运营审美 </a></li>
+		 <li><a href=" http://www.publicdomainpictures.net/" target="_blank">公共领域的图片 - 照片 </a></li>
+		 <li><a href="https://picjumbo.com/" target="_blank">1500免费照片• </a></li>
+		 <li><a href="http://699pic.com/best.html?sourcefrom=10" target="_blank">摄影图片_摄影图片免费下载_摄图网 </a></li>
+		 <li><a href="https://www.howtostartanllc.org/free-stock-photos/" target="_blank">免费照片小企业|如何开始一个llc.org</a></li>
+		 <li><a href="http://www.gratisography.com/" target="_blank">gratisography：免费的高分辨率照片</a></li>
+		 <li><a href="http://photopin.com/" target="_blank">photopin -博客免费照片通过创作共享 </a></li>
+		 <li><a href="https://www.zhihu.com/question/21757507" target="_blank">你平时在哪找免费的可商业使用的图片素材</a></li>
+		 <li><a href="https://unsplash.com/" target="_blank">Unsplash | Beautifol Free Photo Community </a></li>
+		 <li><a href="http://www.lifeofpix.com/" target="_blank">Free high resolution photography - Life of Pix - Home </a></li>
+		 <li><a href="https://www.splitshire.com/" target="_blank">SplitShire - Free Stock Photos - SplitShire - Free Stock Photos & Videos</a></li>
+		 <li><a href="https://freerangestock.com/" target="_blank">Freerange Stock | Free Stock Photos - Totally Free Commercial Photography and </a></li>
+	  </ol>
 	</div>
   </div>
   
   <script>
-  new Vue({
+  /*new Vue({
     el:"#app",
 	data:{
 	  items:[
-	    {"colors":"active","title":"言语相关","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
-		{"title":"前端文章","style":"fa fa-magic","text":"我是言语我喜欢分享我的生活"},
-		{"title":" 工作相关","style":"fa fa-bolt ","text":"我是言语我喜欢分享我的生活"},
+	    {"colors":"active","title":"言语相关","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活",},
+		{"title":"前端文章","style":"fa fa-magic","text":"收集jquery源码及各种难点","text2":"我是如何学习计算机编程的"},
+		{"title":" 工作相关","style":"fa fa-bolt ","text":"想要更优秀吗?让工作更有效率"},
 		{"title":" 收藏相关","style":"fa fa-tint","text":"我是言语我喜欢分享我的生活"},
 		{"title":"言语相关","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
 		{"title":"官网相关","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
@@ -70,12 +188,29 @@
 		{"title":"问卷工具","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
 		{"title":"运营工具","style":"fa fa-suitcase","text":"我是言语我喜欢分享我的生活"},
 	  
-	  ]
-	
-	
+	  ],  
 	}
-  
-  
+  })
+  */
+  $(function(){
+     /*使用fastClick来解决移动端click的300秒延迟*/
+     FastClick.attach(document.body);  
+     $("h2").each(function(){
+	    $("h2").click(function(){
+		   if(!$(this).hasClass('active')){
+		      $(this).addClass("active");
+			  $(this).parent().siblings().children("h2").removeClass("active");
+		   }else{
+		      $(this).siblings("ol").show('slow');
+			  $(this).parent().siblings().children("h2").siblings("ol").hide("slow");  
+		   }
+		})
+	 })
+	  $("h2").each(function(){
+	    $("h2").dblclick(function(){
+		    $(this).siblings("ol").hide("slow");
+		})
+	 })
   })
   </script>
 </body>
