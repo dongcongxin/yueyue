@@ -67,7 +67,7 @@
 				onChange     			: function(page){
 											$('._current','#paginationdemo').removeClass('_current').hide();
 											$('#p'+page).addClass('_current').show();
-											$('body,html').animate({scrollTop:0},200); //使整个页面回到顶部
+											$('body,html').animate({scrollTop:0},300); //使整个页面回到顶部
 										  }
 			});
 		});
