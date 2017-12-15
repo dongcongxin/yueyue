@@ -1,0 +1,72 @@
+*{margin:0;padding:0}
+$border:1px solid red;
+body{
+  background-color:#eff3f5;
+
+}
+.container{
+  overflow:hidden;
+}
+.comWidth{
+  width:1192px;
+  margin:0 auto;
+}
+.headerBar{
+  height:66px;
+  background:#fff;
+  .nav_item{
+     li{
+	    float:left;
+		list-style:none;
+		width:80px;
+		line-height:66px;
+		text-align:center;
+	   a{
+	     text-decoration:none;
+		 color:#555;
+	   
+	   }
+	 
+	 }
+	 
+  
+  }
+}
+.main{
+  
+   .leftArea{
+      width:872px;
+	  .menu{
+		 margin:16px 0;
+		 background-color:#fff;
+	     .title{
+		    height:58px;
+			line-height:58px;
+			border-bottom:1px solid #ccc;
+			margin-left:27px;
+		 
+		 }
+		 .content1{
+		    background:#fff;
+			height:214px;
+		    .col-sm-3{
+			   float:left;
+			   width:170px;
+			   margin:30px 0 0 35px;
+			   overflow:hidden;
+			   img{
+			    width:100%;
+				height:100%;
+				overflow:hidden;
+				
+			   }
+			}
+		 
+		 }
+	  
+	  }
+   
+   }
+
+
+}
