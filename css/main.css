@@ -1,31 +1,45 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\000031}}
+@charset "UTF-8";
+/*移动端适配*/
+/*屏幕小于960的时候执行的样式*/
+@media (max-width: 960px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\000035}}
+  body {
+    width: 100%;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\000036}}
+  .col-sm-3 {
+    width: 16% !important;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000320}}
 * {
   margin: 0;
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000322}}
 body {
   background-color: #FDF1F1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000326}}
 .container {
   overflow: hidden;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000329}}
 .comWidth {
   width: 1192px;
   margin: 0 auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000333}}
 .headerBar {
   height: 66px;
   background: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000337}}
 .headerBar .nav_item li {
   float: left;
   list-style: none;
@@ -33,34 +47,34 @@ body {
   line-height: 66px;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000343}}
 .headerBar .nav_item li a {
   text-decoration: none;
   color: #555;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000356}}
 .main .leftArea {
   width: 872px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000358}}
 .main .leftArea .menu {
   margin: 16px 0;
   background-color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000361}}
 .main .leftArea .menu .title {
   height: 58px;
   line-height: 58px;
   border-bottom: 1px solid #ccc;
   margin-left: 27px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000368}}
 .main .leftArea .menu .content1 {
   background: #fff;
   height: 214px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000371}}
 .main .leftArea .menu .content1 .col-sm-3 {
   float: left;
   width: 170px;
@@ -68,7 +82,7 @@ body {
   margin: 30px 0 0 35px;
   overflow: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/css\/main\.scss}line{font-family:\0000377}}
 .main .leftArea .menu .content1 .col-sm-3 img {
   width: 100%;
   height: 100%;

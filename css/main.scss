@@ -1,3 +1,22 @@
+/*移动端适配*/
+/*屏幕小于960的时候执行的样式*/
+@media(max-width:960px)
+{
+   body{width:100%;}
+   .col-sm-3{width:16% !important;}
+  
+}
+
+
+
+
+
+
+
+
+
+
+
 *{margin:0;padding:0}
 $border:1px solid red;
 body{
