@@ -2,8 +2,10 @@
 /*屏幕小于960的时候执行的样式*/
 @media(max-width:960px)
 {
-   body{width:100%;}
-   .col-sm-3{width:16% !important;}
+   body{width:100% !important;}
+   .content1{width:321px;height:342px !important;;}
+   .col-sm-3{width:47% !important;margin:2px 0 0 7px !important; border:1px solid red}
+   .col-sm-3 img{width:90% !important;height:90% !important; }
   
 }
 
