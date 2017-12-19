@@ -9,6 +9,7 @@
 <title>表情包</title>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css">
+<script src="js/fastclick.js"></script>
 </head>
 <body>
 <div class="container">
@@ -30,54 +31,32 @@
 		  </ul>
 	   </div>
    </div>
-   <!-- 
-   <div class="main">
-      <div class="comWidth">
-	     <div class="leftArea">
-		    <div class="menu">
-			   <div class="title">线条人</div>
-			   <div class="content1">
-			      <div class="col-sm-3"><img src="images/koala/xm/xm1.jpg" alt="xm1"></div>
-				  <div class="col-sm-3"><img src="images/koala/xm/xm2.jpg" alt="xm2"></div>
-				  <div class="col-sm-3"><img src="images/koala/xm/xm3.jpg" alt="xm3"></div>
-				  <div class="col-sm-3"><img src="images/koala/xm/xm4.jpg" alt="xm4"></div>
-			   </div>
-			</div>
-		    
-			 <div class="menu">
-			   <div class="title">权律二表情包</div>
-			   <div class="content1">
-			      <div class="col-sm-3"><img src="images/koala/music/1.jpg" alt="xm1"></div>
-				  <div class="col-sm-3"><img src="images/koala/music/2.jpg" alt="xm2"></div>
-				  <div class="col-sm-3"><img src="images/koala/music/3.jpg" alt="xm3"></div>
-				  <div class="col-sm-3"><img src="images/koala/music/4.jpg" alt="xm4"></div>
-			   </div>
-			</div>
-			
-			 <div class="menu">
-			   <div class="title">你真是我的掌上明猪</div>
-			   <div class="content1">
-			      <div class="col-sm-3"><img src="images/koala/zhu/1.jpg" alt="xm1"></div>
-				  <div class="col-sm-3"><img src="images/koala/zhu/2.jpg" alt="xm2"></div>
-				  <div class="col-sm-3"><img src="images/koala/zhu/3.jpg" alt="xm3"></div>
-				  <div class="col-sm-3"><img src="images/koala/zhu/4.jpg" alt="xm4"></div>
-			   </div>
-			</div>
-			
-			 <div class="menu">
-			   <div class="title">emmmmmm</div>
-			   <div class="content1">
-			      <div class="col-sm-3"><img src="images/koala/a/1.jpg" alt="xm1"></div>
-				  <div class="col-sm-3"><img src="images/koala/a/2.jpg" alt="xm2"></div>
-				  <div class="col-sm-3"><img src="images/koala/a/3.jpg" alt="xm3"></div>
-				  <div class="col-sm-3"><img src="images/koala/a/4.jpg" alt="xm4"></div>
-			   </div>
-			</div>
-		 </div>
-		 <div class="rightArea"></div>
-	  </div>
-   </div>
-</div> -->
+  <!--在移动端显示的头部-->
+  <div class="header_mobile" style="display:none">
+    <div class="logo">
+	  <a href="#" title="斗图啦"></a>
+	</div>
+	<button class="btn">
+	   <span></span>
+	   <span></span>
+	   <span></span>
+	   <span></span>
+	</button>
+  </div>
+  <!--移动端显示的下拉菜单-->
+  <div class="drop_down_mobile" style="display:none">
+     <ul>
+	   <li><a href="#">最新套图</a></li>
+	   <li><a href="#">最新表情</a></li>
+	   <li><a href="#">表情搜索</a></li>
+	   <li><a href="#">表情制作</a></li>
+	   <li><a href="#">斗图群</a></li>
+	   <li><a href="#">站长开发</a></li>
+	   <li><a href="#">帮助我们</a></li>
+	   <li><a href="#">表情投稿</a></li>
+	 </ul>
+  
+  </div>
 <div id="paginationdemo" style="clear:both">
    <!--第一页-->
     <div id="p1" class="pagedemo _current" style="">
@@ -574,9 +553,16 @@
 </div>
     <div id="demo5"> </div>
   </div>
-
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.paginate.js"></script>
 <script src="js/lanrenzhijia.js"></script>
+<script>
+  $(function(){
+     FastClick.attach(document.body);  
+     $(".btn").click(function(){
+       $(".drop_down_mobile").toggle();
+  })
+})
+</script>
 </body>
 </html>

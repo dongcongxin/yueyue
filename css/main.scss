@@ -1,15 +1,27 @@
 /*移动端适配*/
 /*屏幕小于960的时候执行的样式*/
+$border:1px solid red;
 @media(max-width:375px)
 {
    body{width:100% !important;}
+   .headerBar{display:none}
+   .header_mobile{display:block !important;height:60px;background:#fff;}
+   .logo{float:left;}
+   .logo a{background:url(../images/logo.png) 50% no-repeat;width:80px;background-size:80px;display:block;padding:63px 0 0 44px;}
+   .btn{float:left;margin-left:46%;margin-top:6%;width:13%;border:0;outline:none;background:#fff}
+   .btn span{display:block;border-top:3px solid #000;margin-bottom:2px;width:77%;}
+   .drop_down_mobile{clear:left;background:#fff;text-align:center}
+   .drop_down_mobile li{height:37px;border-bottom:1px solid #ccc;line-height:37px;
+       a{text-decoration:none;color:#000}
+   
+   }
    .content1{width:321px;height:342px !important;margin:6px 0 0 28px !important;}
    .col-sm-3{width:47% !important;margin:2px 0 0 7px !important;}
    .col-sm-3 img{width:90% !important;height:90% !important; }
    .jPaginate{left:6% !important;}
   
 }
-/*屏幕小于960的时候执行的样式*/
+/*屏幕小于414的时候执行的样式*/
 @media(max-width:414px)
 {
    body{width:100% !important;}
@@ -21,7 +33,7 @@
 }
 
 *{margin:0;padding:0}
-$border:1px solid red;
+
 body{
   background-color:#FDF1F1;
 
