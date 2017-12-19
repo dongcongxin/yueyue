@@ -3,21 +3,12 @@
 @media(max-width:960px)
 {
    body{width:100% !important;}
-   .content1{width:321px;height:342px !important;;}
-   .col-sm-3{width:47% !important;margin:2px 0 0 7px !important; border:1px solid red}
+   .content1{width:321px;height:342px !important;margin:6px 0 0 28px !important;}
+   .col-sm-3{width:47% !important;margin:2px 0 0 7px !important;}
    .col-sm-3 img{width:90% !important;height:90% !important; }
+   .jPaginate{left:6% !important;}
   
 }
-
-
-
-
-
-
-
-
-
-
 
 *{margin:0;padding:0}
 $border:1px solid red;
