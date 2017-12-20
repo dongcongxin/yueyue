@@ -52,7 +52,7 @@
 				mouse		: 'press'
 			});
 			$("#demo5").paginate({
-				count 		: 10,
+				count 		: 15,
 				start 		: 1,
 				display     : 7,
 				border					: true,
