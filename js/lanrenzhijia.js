@@ -54,7 +54,7 @@
 			$("#demo5").paginate({
 				count 		: 15,
 				start 		: 1,
-				display     : 8,
+				display     : 7,
 				border					: true,
 				border_color			: '#fff',
 				text_color  			: '#fff',
