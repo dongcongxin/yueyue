@@ -26,7 +26,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
 		<!--服装搭配-->
 		<li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">衣服搭配 <span class="caret"></span></a>
@@ -82,7 +82,28 @@
       </ul>
 	  <!---->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">关于我</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal">关于我</a></li>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">关于我</h4>
+			  </div>
+			  <div class="modal-body">
+		         我之前也做过表情包和收藏的页面,到最后发现只有我自己用,我也是自己做练习用,但当我无聊的时候、不知道干嘛的时候
+				 就爱想一些乱七八糟的事情,总是把心情弄得很糟,为什么不自己做一个无聊时可以刷刷刷的东西呢。于是在平安夜的这一天我写了这个。 关于
+				 名字 胡萝卜与小怪兽的决斗 是我女朋友取得 大概是因为我俩的暖手袋的造型吧我买的是小怪兽的她的是胡萝卜的,很可爱的说
+		
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其它产品 <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -161,6 +182,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/dropdown.js"></script>
 <script src="js/collapse.js"></script>
+<script src="js/modal.js"></script>
 
 </body>
 </html>
