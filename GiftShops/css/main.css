@@ -1,19 +1,23 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\000031}}
 body {
   background-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\000035}}
 .navbar-default {
   background: #fff;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\000039}}
 .content {
   height: 257px;
   padding: 16px 20px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.67;
   margin-top: -20px;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\0000317}}
 img {
   width: 100%;
   height: auto;
