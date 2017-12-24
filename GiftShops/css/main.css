@@ -9,6 +9,11 @@ body {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\000039}}
+.dropdown-menu {
+  font-size: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\0000313}}
 .content {
   height: 257px;
   padding: 16px 20px;
@@ -17,7 +22,7 @@ body {
   margin-top: -20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\0000321}}
 img {
   width: 100%;
   height: auto;
