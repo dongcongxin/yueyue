@@ -36,4 +36,17 @@ img {
   font-weight: bold;
 }
 
+.banner {
+  position:relative;
+}
+
+.text {
+	position:absolute;
+	left:26%;
+	top:17%;
+	transform:rotate(-17deg);
+	font-size:14px;
+	font-weight:bold;
+	
+}
 /*# sourceMappingURL=main.css.map */
