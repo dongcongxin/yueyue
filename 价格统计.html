@@ -36,9 +36,14 @@
 			<td>{{ message2*0.5}}</td>
 		</tr>
 		<tr>
-		    <td>手机号</td>
+		    <td>搜狗下拉词</td>
 			<td><input type="text" v-model="message3"></td>
-			<td>{{ message3*4}}</td>
+			<td>{{ message3*0.5}}</td>
+		</tr>
+		<tr>
+		    <td>手机号</td>
+			<td><input type="text" v-model="message4"></td>
+			<td>{{ message4*4}}</td>
 		</tr>
 	</tbody>
 </table>
@@ -49,7 +54,8 @@ var vm = new Vue({
 	   message:null,
 	   message1:null,
 	   message2:null,
-	   message3:null
+	   message3:null,
+	   message4:null
 	}
 })
 </script>
