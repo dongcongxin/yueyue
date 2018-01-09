@@ -14,6 +14,12 @@ body {
   font-size: 18px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\0000314}}
 .content {
   height: 257px;
@@ -24,12 +30,6 @@ body {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\0000322}}
-img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  display: block;
-}
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/git\/Git\/yueyue\/yueyue\/GiftShops\/css\/main\.scss}line{font-family:\0000324}}
 .fontweight {
