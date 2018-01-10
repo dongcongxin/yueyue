@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>typeof 操作符返回变量或表达式的类型。</title>
+<style type="text/css">
+*{
+    margin:0;
+	padding:0;
+}
+.container {
+    width:980px;
+	margin:20px auto;
+} 
+.active {
+    background:yellow;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <textarea rows="30" cols="100" id="text"></textarea><br>
+	<button onclick="addSuffix()">添加后缀</button>
+	<button onclick="replaceStr()">替换功能</button><input type="text" id="text1"><input type="text" id="text2"><br><br>
+	展示区:<p id="demo"></p>
+</div>
+<script>
+/*
+ * 功能：实现替换 
+ * 设计：①有一个输入框(放入要替换的字符串),
+ *       ②有两个按扭 一个是添加后缀 跟着一个输入框-->输入所要添加后缀:[];
+           一个是替换功能跟着一个输入框-->输入所要替换内容:[];
+ *       ③封装两个函数一个叫 addStr  replaceStr
+          addSuffix:添加后缀 查找到空格替换成【后缀】然后空一行  val.replace(/\s/g, "【王美丽】<br>");
+*/
+   // 功能:添加后缀 
+    function addSuffix () {
+	   var val = document.getElementById("text").value; // 输入的字符串
+	   var mat = document.getElementById("text1").value; // 获取的输入框
+	   var rep = document.getElementById("text2").value  // 替换的输入框
+	   var dem = document.getElementById("demo");
+	   // 编写正则表达式
+	   var re = new RegExp(/\s/,"g");
+	   var replace = val.replace(re,mat + "<br>"); 
+	   dem.innerHTML = replace;
+	}
+	
+	// 功能:实现替换功能
+    function replaceStr () {
+	   var val = document.getElementById("text").value; // 输入的字符串
+	   var mat = document.getElementById("text1").value; // 获取的输入框
+	   var rep = document.getElementById("text2").value  // 替换的输入框
+	   var dem = document.getElementById("demo");
+	   // 编写正则表达式
+	   var re = new RegExp(mat,"g");
+	   var replace = val.replace(re,rep + "<br>"); 
+	   dem.innerHTML = replace;
+	}
+</script>
+
+
+
+</body>
+</html>
