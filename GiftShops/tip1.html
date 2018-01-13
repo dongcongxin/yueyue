@@ -181,19 +181,5 @@
 <script src="js/dropdown.js"></script>
 <script src="js/collapse.js"></script>
 <script src="js/modal.js"></script>
-<script>
- // 距离当前已经过去的天数
-	function getTimer(defaultDate,defaultmonth,timer){
-		var d =new Date();
-		var newMoth = d.getMonth()+1;
-		var newDate = d.getDate();
-		var timer = document.getElementById(timer);
-		var mothDiff=parseInt(newMoth-defaultmonth)*30;
-		var datDiff = parseInt(newDate-defaultDate);
-		timer.innerHTML = "截至现在已经过去:"+parseInt(mothDiff+datDiff)+"天";
-	}
-	
-	getTimer(24,12,"data");
-</script>
 </body>
 </html>
