@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人管理</title>
+<style type="text/css">
+    *{margin:0;padding:0}
+    .contaner{
+        width:832px;
+        margin:30px auto;
+    }
+    .main li {
+        width:140px;
+        height:40px;
+        list-style:none;
+        line-height:40px;
+        text-align:center;
+        float:left;
+        cursor: pointer;
+    }
+    .content{
+        clear:left;
+        padding:20px 0 0 16px;
+    }
+    .content li{
+        min-height:400px;
+        display:none;
+    }
+    dl{
+        padding-top:10px;
+        padding-bottom:8px;
+    }
+    dl dd{
+        line-height:1.8;
+        list-style-type: circle
+    }
+    dl dd a{
+        text-decoration:none;
+        color:#e54e53;
+    }
+    .active{
+        color:red;
+    }
+</style>
+</head>
+<body>
+<div class="contaner" id="container">
+    <div class="main" id="main">
+        <ul>
+            <li class="active">前端资料管理</li>
+            <li>php资料管理</li>
+            <li>牛人博客</li>
+            <li>PDF下载</li>
+            <li>Vue资料汇总</li>
+        </ul>
+    </div>
+    <div class="content" id="content">
+        <ul>
+            <li style="display:block"><h2>JavaScript</h2>
+                <dl>
+                    <dd><a href="images/js.jpg" onclick="getImage(this,this.innerHTML);return false">你不知道的JavaScript（中英全集）</a></dd>
+                    <dd><a href="images/479.593.big.jpg" onclick="getImage(this,this.innerHTML);return false">ppk谈JavaScript</a></dd>
+                    <dd><a href="images/1132.507.big.jpg" onclick="getImage(this,this.innerHTML);return false">JavaScript异步编程</a></dd>
+                    <dd><a href="images/1613.330.big.jpg" onclick="getImage(this,this.innerHTML);return false">学习JavaScript数据结构与算法</a></dd>
+                    <dd><a href="images/1632.236.big.jpg" onclick="getImage(this,this.innerHTML);return false">JavaScript设计模式与开发实践</a></dd>
+                    <dd><a href="images/QQ截图20180129185257.png" onclick="getImage(this,this.innerHTML);return false">高性能JavaScript</a></dd>
+                </dl><br>
+                <dl id="imgs">
+                    <dd><a href="https://pan.baidu.com/s/1mhGoYBu#list/path=%2F"><img src="images/js.jpg"></a></dd>
+                    <dd id="title">你不知道的JavaScript（中英全集）</dd>
+                </dl>
+            </li>
+            <li><h2>php资料</h2>
+                <dl>
+                    <dd><a href="http://php.net/manual/zh/" target="_blank">PHP手册</a></dd>
+                </dl>
+            </li>
+            <li><h2>牛人博客</h2>
+                <dl>
+                    <dd><a href="https://www.cnblogs.com/aaronjs/p/3279314.html" target="_blank">艾伦jQuery源码分析</a></dd>
+                    <dd><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/00143470025281435e4e03117a74438aaf98c4f7b30b307000" target="_blank">廖雪峰的官方网站</a></dd>
+                    <dd><a href="https://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" target="_blank">汤姆大叔-深入理解JavaScript</a></dd>
+                    <dd><a href="http://www.ruanyifeng.com/blog/archives.html" target="_blank">阮一峰的网络日志</a></dd>
+                    <dd><a href="http://ghmagical.com/" target="_blank">css魔法</a></dd>
+                    <dd><a href="http://www.zhangxinxu.com/wordpress/" target="_blank">张鑫旭css博客</a></dd>
+                </dl>
+            </li>
+            <li><h2>PDF下载</h2>
+                <dl>
+                    <dd><a href="https://pan.baidu.com/s/1mhGoYBu#list/path=%2F" target="_blank">你不知道的JavaScript（中英全集）</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1skCGytf" target="_blank">深入浅出ES6</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1kV7JgAr" target="_blank">JavaScript异步编程</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1geHe6An#list/path=%2F" target="_blank">编写JavaScript的68个有效方法</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1ge6VX7d" target="_blank">JavaScript函数式编程</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1c1BLKeW" target="_blank"> 单页Web应用 JavaScript从前端到后端</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1i5BRbaH" target="_blank"> Node Web开发</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1eRI214A" target="_blank"> [算法]学习JavaScript数据结构与算法</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1qY79tBe" target="_blank"> HTTP权威指南</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1hszckeg" target="_blank"> 人月神话</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1eRDJigy" target="_blank"> 编译原理[龙书]</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1c23U3WO" target="_blank"> 高性能网站建设</a></dd>
+                    <dd><a href="https://pan.baidu.com/s/1o8K4Els" target="_blank"> 软件随想录</a></dd>
+                </dl>
+
+            </li>
+            <li><h2>Vue资料汇总</h2>
+                <dl>
+                    <dd><a href="https://zhuanlan.zhihu.com/p/30846688" target="_blank">深入理解v-model</a></dd>
+                    <dd><a href="https://zhuanlan.zhihu.com/p/30745811" target="_blank">Vue 组件data为什么必须是函数？</a></dd>
+                    <dd><a href="https://zhuanlan.zhihu.com/p/30742131" target="_blank">Vue 生命周期钩子</a></dd>
+                    <dd><a href=""></a></dd>
+                    <dd><a href=""></a></dd>
+                </dl>
+            
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+ window.onload = function(){
+     var oDiv = document.getElementById("main");
+     var oli = oDiv.getElementsByTagName("li");
+     var content = document.getElementById("content");
+     var ali = content.getElementsByTagName("li");
+
+     for (var i =0;i<oli.length;i++) {
+         oli[i].index = i;
+         oli[i].onclick = function() {
+             for (var j = 0;j<oli.length;j++) {
+                 oli[j].className = "";
+                 ali[j].style.display = "none";
+             }
+             this.className = "active";
+             ali[this.index].style.display = "block";
+         }
+     }
+ }
+
+ function getImage(src,title) {
+     var imgs = document.getElementById("imgs");
+     var img = imgs.getElementsByTagName("img")[0];
+     var titles = document.getElementById("title");
+     img.setAttribute("src",src);
+     titles.innerHTML = title;
+ }
+</script>
+</body>
+</html>
