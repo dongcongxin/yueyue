@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>聚合浏览器</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="https://www.baidu.com/" target="iframe_a">百度</a></li>
+	<li><a href="http://m.baidu.com/" target="iframe_a">百度移动端</a></li>
+	<li><a href="https://www.sogou.com/" target="iframe_a">搜狗pc端</a></li>
+	<li><a href="https://m.sogou.com/" target="iframe_a">搜狗移动端</a></li>
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			聚合浏览器 <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="https://dongcongxin.github.io/yueyue/pc" target="iframe_a">百度pc+搜狗移动双屏模式</a></li>
+			<li><a href="https://dongcongxin.github.io/yueyue/wraps" target="iframe_a">百度移动+搜狗移动双屏显示</a></li>
+			<li><a href="https://dongcongxin.github.io/yueyue/360" target="iframe_a">360pc+360移动双屏显示</a></li>
+			<li class="divider"></li>
+			<li><a href="#">双击666</a></li>
+		</ul>
+	</li>
+	<li><a href="#">PHP</a></li>
+</ul>
+<iframe src="http://www.baidu.com" name="iframe_a" width="100%" height="680px"></iframe>
+</body>
+</html>
