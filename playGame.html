@@ -1,0 +1,537 @@
+﻿<!-- Learn about this code on MDN: https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage -->
+
+<html>
+  <head>
+    <title>刺激战场</title>
+    <script src="./lib/vue/vue.js"></script>
+	<style type="text/css">
+	 *{
+	    margin:0;
+		padding:0
+	 }
+	 
+	 ul li{
+	    list-style:none;
+	 }
+	 
+	 a{
+	    text-decoration:none;
+	 }
+	 
+	 body {
+	   background:#8e908f;
+	 }
+	 
+	 #wrap{
+		margin：0 auto;
+	 }
+	 
+	 .logo{
+	    width:100%;
+		height:451px;
+	    background:url("37-1P10Q14036.jpg") center top no-repeat;
+	 }
+	 
+	 #header{
+	    width:980px;
+		margin:-108px 0 0 220px;
+	 }
+	 
+	 .nav li{
+	    float:left;
+		opacity:0.6;
+		line-height:58px;
+		text-align:center;
+		background:#000;
+		position:relative;
+	 }
+	 
+	 .nav li a{
+	    display:block;
+		width:125px;
+		height:58px;
+	    color:#fff;
+		font-weight:bold;
+		margin:0 2px;
+	 }
+	 
+	 .list{
+	    position:absolute;
+		top:58px;
+		left:0
+	 }
+	 
+	 .list li{
+	    color:#fff;
+		opacity:1;
+		font-weight:bold;
+		border-bottom:1px solid #ccc;
+	 }
+	 
+	 .active{
+	    background:
+	 }
+	 
+	 .main{
+	    width:903px;
+		height:600px;
+		margin-left:220px;
+	    clear:left;
+		background:#fff;
+		border:1px solid #ccc;
+	 }
+	 
+	 .content{
+	    width:867px;
+		margin:0 auto;
+	 }
+	 
+	 .submenu{
+	    width:431px;
+		height:25px;
+		float:left;
+		margin-top:14px;
+	 }
+	 
+	 .submenu h3{
+	    width:70px;
+		height:26px;
+		text-align:center;
+		line-height:26px;
+	    float:left;
+		font-size:14px;
+		background:#4e5d98;
+		margin-right:10px;
+		color:#fff;
+	 }
+	 
+	 .submenu ul li{
+	    float:left;
+		padding:0 6px;
+		text-align:left;
+		line-height:25px;
+	 } 
+	 
+	 .submenu ul li a{
+		color:#000;
+	 }
+	 
+	 .tab-summary{
+	    float:left;
+		width:613px;
+		margin-top:30px;
+	 }
+	 
+	 .tab-summary .tab-list li{
+	    width:112px;
+		height:45px;
+		text-align:center;
+		line-height:45px;
+		border:1px solid #ccc;
+	    float:left;
+	 }
+	 
+	 .tab-summary .tab-list li a{
+		color:#000;
+	 }
+	 
+	 .firearms{
+	    clear:left;
+		width:567px;
+		height:400px;
+		border:1px solid #ccc;
+	 }
+	 
+	 .firearms img{
+	    width:88px;
+		height:82px;
+		display:block;
+	 }
+	 
+	 .firearms ul li{
+	    float:left;
+		width:111px;
+	 }
+	 
+	 .firearms-content{
+	    margin-left:12px;
+	 }
+	 
+	 .firearms-content .title{
+	    padding-left:32px;
+	 }
+	</style>
+  </head>
+  <body>
+   <div id="wrap">
+      <div class="logo"></div>
+      <div id="header">
+	        <ul class="nav">
+		       <li v-for="(navItem, index) in navItems" 
+		       @mouseenter="shoToggle(navItem, index)" 
+		       @mouseleave ="shoToggle(navItem)" >
+		     <a href="javascript:;" :class="{active:nowIndex === index}">{{ navItem.name }}</a>
+			 <ul class="list" v-show="navItem.isSubshow">
+			   <li v-for="subItem in navItem.subItems">
+			     <a href="javascript:;">{{ subItem.name }}</a>
+			   </li>
+			 </ul>
+		  </li>
+		</ul>
+	  </div>
+	  <div class="main">
+	    <div class="content">
+			 <div class="submenu" v-for="item in items"> 
+				   <h3>{{ item.title }}</h3>
+				   <ul>
+					 <li v-for="submenu in item.submenus">
+						<a v-bind:href="submenu.href">{{ submenu.title }}</a>
+					 </li>
+				   </ul>
+			 </div>
+			 <div class="tab-summary">
+			    <ul class="tab-list">
+				  <li v-for="(tab,index) in tabs" @click="tabToggle(index)">
+				    <a href="javascript:;">{{ tab.name }}</a>
+				  </li>
+				</ul>
+				<div class="firearms">
+				   <div v-show="index === 0" class="firearms-content">
+				      <ul>
+					    <li v-for="(rifle, index) in rifles" :key="rifle">
+						  <a href="javascript:;"><img v-bind:src="rifle.src" @click="greet(index)"></a>
+						  <span class="title">{{ rifle.title }}</span>
+						</li>
+					  </ul>
+				   </div>
+				   <div v-show="index === 1" class="firearms-content">
+				       <ul>
+					    <li v-for="(snipe, index) in snipes" :key="snipe">
+						  <a href="javascript:;"><img v-bind:src="snipe.src" @click="snipeGreet(index)"></a>
+						  <span class="title">{{ snipe.title }}</span>
+						</li>
+					  </ul>
+				   </div>
+				   <div v-show="index === 2" class="firearms-content">
+				       <ul>
+					    <li v-for="(Submachine, index) in Submachines" :key="Submachine">
+						  <a href="javascript:;"><img v-bind:src="Submachine.src" @click="SubmachineGreet(index)"></a>
+						  <span class="title">{{ Submachine.title }}</span>
+						</li>
+					  </ul>
+				   </div>
+				   <div v-show="index === 3">枪械3</div>
+				   <div v-show="index === 4">枪械4</div>
+				   <div v-show="index === 5">枪械5</div>
+				</div>
+		</div>
+	    </div>	
+	  </div>
+   </div>
+   <script>
+    new Vue({
+	  el:"#wrap",
+	  data:{
+	    nowIndex:-1,
+     	index:0,
+	    navItems:[
+		   {
+		     name:"刺激战场"
+		   },
+		   {
+		     name:"枪械讲解",
+			 isSubshow:false,
+			 subItems:[
+			   {
+			      name:"手枪"
+			   },
+			   {
+			      name:"冲锋枪"
+			   },
+			   {
+			      name:"步枪"
+			   }
+			 
+			 ]
+			 
+		   },
+		   {
+		     name:"技巧讲解",
+			 isSubshow:false,
+			 subItems:[
+			   {
+			      name:"修改默认键位"
+			   },
+			   {
+			      name:"明确目标"
+			   },
+			   {
+			      name:"关于地图"
+			   }
+			 
+			 ]
+		   },
+		   {
+		     name:"车辆讲解",
+			 isSubshow:false,
+			 subItems:[
+			   {
+			      name:"三轮摩托"
+			   },
+			   {
+			      name:"摩托车"
+			   },
+			   {
+			      name:"敞篷"
+			   }
+		   ]
+		   },
+		   {
+		     name:"意识教学",
+			 isSubshow:false,
+			 subItems:[
+			   {
+			      name:"搜房篇"
+			   },
+			   {
+			      name:"驾驶篇"
+			   },
+			   {
+			      name:".舔包篇"
+			   }
+		   ]
+		   },
+		   {
+		     name:"吃鸡表情包"
+		   },
+		   {
+		     name:"吃鸡趣事"
+		   }
+		],
+		items:[
+		  {
+		    title:"新手入门",
+			submenus:[
+			  {
+			    title:"了解地图 |"
+			  },
+			  {
+			    title:"录像功能 |"
+			  },
+			  {
+			    title:"QQ活动 |"
+			  }
+			]
+		  },
+		  {
+		   title:"枪械攻略",
+		    submenus:[
+			  {
+			    title:"M416 |"
+			  },
+			  {
+			    title:"SKS |"
+			  },
+			  {
+			    title:"SCAR-L |"
+			  },
+			  {
+			    title:"冲锋枪性能"
+			  }
+			]
+		  },
+		   {
+		   title:"进阶攻略",
+		    submenus:[
+			  {
+			    title:"五分钟变高手 |"
+			  },
+			  {
+			    title:"地图资源分配 |"
+			  },
+			  {
+			    title:"听声辩位"
+			  }
+			]
+		  },
+		  {
+		   title:"推荐攻略",
+		    submenus:[
+			  {
+			    title:"金币作用 |"
+			  },
+			  {
+			    title:"生存知识 |"
+			  },
+			  {
+			    title:"投掷武器作用"
+			  },
+			]
+		  },
+		  
+		
+		],
+		/*枪械简介*/
+		tabs:[
+		  {
+		    name:"步枪"
+		  },
+		  {
+		    name:"狙击枪"
+		  },
+		  {
+		    name:"冲锋枪"
+		  },
+		  {
+		    name:"手枪"
+		  },
+		  {
+		    name:"散弹枪"
+		  }
+		
+		],
+		/*枪械图片*/
+		rifles:[
+		  {
+		    src:"imgs/GROZA.jpg",
+			title:"GROZA"
+		  },
+		  {
+		    src:"imgs/SCAR-L.jpg",
+			title:"SCAR-L"
+		  },
+		  {
+		    src:"imgs/M16A4.jpg",
+			title:"M16A4"
+		  },
+		  {
+		    src:"imgs/M416.jpg",
+			title:"M416" 
+		  },
+		  {
+		    src:"imgs/AKM.jpg",
+			title:"AKM" 
+		  }
+		
+		],
+	    snipes:[
+		  {
+		    src:"imgs/VSS.jpg",
+			title:"VSS"
+		  },
+		  {
+		    src:"imgs/MINI14.jpg",
+			title:"MINI14"
+		  },
+		  {
+		    src:"imgs/SKS.jpg",
+			title:"SKS"
+		  },
+		  {
+		    src:"imgs/MK14.jpg",
+			title:"MK14"
+		  },
+		  {
+		    src:"imgs/98K.jpg",
+			title:"98K"
+		  },
+		  {
+		    src:"imgs/M24.jpg",
+			title:"M24"
+		  },
+		  {
+		    src:"imgs/AWM.jpg",
+			title:"AWM"
+		  },
+		],
+		Submachines:[
+		  {
+		    src:"imgs/tangmuxun.jpg",
+			title:"汤姆逊" 
+		  },
+		  {
+		    src:"imgs/ump9.jpg",
+			title:"UMP9" 
+		  },
+		  {
+		    src:"imgs/uzi.jpg",
+			title:"UZI"
+		  }
+
+		]
+	  },
+	  
+	  methods:{
+	    shoToggle:function(shoToggle,index){
+		  this.nowIndex = index;
+		  shoToggle.isSubshow = !shoToggle.isSubshow;
+		},
+		tabToggle:function(index){
+		  this.index = index;
+		},
+		greet:function(index){
+		   switch(index){
+		      case 0:
+			      alert("GROZA\r\r 枪械讲解:\r绝地求生刺激战场中有一把枪，大家都叫她为狗杂，相信很多朋友都是这么叫的，毕竟他的名字实在是太难念，而且还长\r\r枪械特性:\r武器Groza，这是一款消耗 7.62 毫米弹药的自动步枪，这把枪感觉还不错，首先伤害高，其次开全自动近距离突突突，射速很快。需要注意的是只有空投才有，不然就只能捡快递啦。基本上可以当微冲用，横扫一切微冲。不过毕竟是突击步枪，不是自动步枪。");
+				  break;
+		      case 1:
+			      alert("SCAR-L\r\r 枪械讲解:\rSCAR-L的有效射程达到了600和M416在突击步枪里并列第一，他的优势在于他的稳定性，装备前握把之后枪械的后坐力会明显降低。他的唯一弱点是在于射速，比M416和M16A4都慢所以伤害上相对不高。\r\r枪械特性:\rSCAR-L的有效射程达到了600和M416在突击步枪里并列第一，他的优势在于他的稳定性，装备前握把之后枪械的后坐力会明显降低。他的唯一弱点是在于射速，比M416和M16A4都慢所以伤害上相对不高。");
+				  break;
+			  case 2:
+			      alert("M16A4\r\r 枪械讲解:\rM16A4是唯一一把可以也只能切换三连发的突击步枪，而且它的三连发间隔几乎为零，要知道同样可以三连发的微冲三连发可是有间隔的，所以这也造就了M16A4是绝地求生中射击速度最快的突击步枪，同时它也是子弹初速最快的突击步枪，全武器第三快，仅次于M249 915的子弹初速。\r\r枪械特性:\r万金油,900子弹初速，同样的41单发伤害，更快的射速，其他5.56mm突击步枪和它比有什么优势?在你学会掌控三连发之后全自动在它面前都是渣!有了M16A4你不用跟着队友屁股后面求握把求枪托，不用翻山越岭找枪口，近距离拳打M416，远距离脚踢AKM。")
+		          break;
+			  case 3:
+			      alert("M416\r\r 枪械讲解:\r不单单是吃鸡新手喜欢，一些久经沙场的老兵对它也是爱不释手，\r\r枪械特点:\r满配后是最好的步枪，M416的点射扫射全能，如果有配件是玩家的最佳选择，玩家有M416的时候要尽量的打头，毕竟步枪伤害有限，扫头一般一两枪绝对死，还有M416最好是有枪托和握把的，这样可以更好的提升稳定性，提升爆头的几率!")
+		          break;
+			  case 4:
+			      alert("AKM\r\r 枪械讲解:\r 每一发子弹可以造成的伤害最高，这意味着如果你可以打中多次头部暴击的话AKM是一把非常优秀的工具。\r\r枪械特点:\r沉重的后坐力以及一个较慢的开火速率代表着它很可能是总体上最弱的自动步枪，同时还有一个差劲的自动模式。为获得最佳效果请在20米外坚持单点模式，并且尽可能的爆头。")
+		          break;
+		   }
+		},
+		snipeGreet:function(index){
+		  switch(index){
+		      case 0:
+			      alert("VSS\r\r 枪械讲解:\rVSS是一把自带四倍镜的狙击步枪，射程却仅有100m，伤害仅有35。无论是射程还是伤害，都是所有狙击步枪中最低的。与其说是一把狙击枪，不如说是一把可以近身自卫的望远镜。\r\r枪械特性:\r优点：优点在于本身自带四倍镜、亚音速子弹带来的消声效果和不错的射速。而且消音VSS比一般的步枪消音声音更轻，杀人于无形的利器。\r缺点：子弹少，吃扩容弹夹，弹道比较难把握，伤害也比较一般。");
+				  break;
+		      case 1:
+			      alert("MINI14\r\r 枪械讲解:\r官方定义是半自动射手步枪，用途当然是和SKS很像啦，这把枪配件上不需要弹夹，初始有20发弹容量，扩容之后为30发，可以说是拿到手就够用。。\r\r枪械特性:\r优势一：射速很快，对于枪法还不够好的新人或是手残党来说 要想每次都爆头击杀肯定是很难得事 而mini14的高射速在单位时间内依靠更多的射击次数弥补手残和枪法的不足\r优势二：稳定性强，mini14虽然配狙击枪的配件 但后坐力远远小于传统狙击枪 并且打起来并不飘 无论配红点还是倍镜都是稳得一逼的存在\r优势三：伤害高 与98k sks相比mini的伤害不算高 但是与m4a1 scar等传统步枪相比伤害又更高 mini综合了狙击枪的伤害又减弱了狙击枪的不稳定性 有效伤害非常高\r\r最佳搭配：mini+4倍镜+消音器 mini加消音器绝对是恐怖的存在 每个人听到这个声音都是担心自己的性命还有惦记你手上的mini 而对于mini来说4倍镜好于8倍镜 想练倍镜的新人们完全可以用mini来练 2倍4倍都能得到飞速的提升 这是m4等步枪无法达到的。");
+				  break;
+			  case 2:
+			      alert("SKS\r\r 枪械讲解:\r初速略慢于ak，几乎没有左右失偏，对于非三级盔目标试试打脖子，趴在地上的人不用刻意瞄头，只要第一枪你没打飞他不管怎么起身都是必死。\r\r优点:\r在全地图可以捡到，中远距离点射稳，伤害高，如果有高倍镜的话，捡一把可以对敌人形成装备压制，有效击杀中远距离的敌人，保证团队周围的安全。\r缺点:\r近战无力，比较依赖高倍镜，以及各种配件，比较依赖手速，建议在四排中使用，配件比较容易找齐，用途也可以充分发挥。")
+		          break;
+			  case 3:
+			      alert("MK14\r\r 枪械讲解:\rMK14跟SKS十分类似，但它威力更大，只出现在空投补给箱中，并且它具有特有的全自动开火模式，配合0.09秒的射速，即使在近距离也能发挥强大的威力。\r\r枪械特点:\r伤害和弹夹容量都优于98k，伤害不及M24，但是弹夹容量完爆，所以这把抢也是一把相对适合新手玩家的狙击枪，弹夹容量多的情况下允许的容错率也相对高了。!")
+		          break;
+			  case 4:
+			      alert("98K\r\r 枪械讲解:\r Kar98k也许是游戏里最差的螺栓行动步枪了，但是在高手手中还是一把非常厉害的武器。这把武器在地图上的许多区域内都发挥良好，多数玩家应该练习使用这把武器，因为它还是非常稳定的。\r\r枪械特点:\rKar98K是一把可搜集的威力最大的狙击枪，由于其可以在面对二级及一下头盔时一枪毙命，成为了大多数高手的必备武器，可以令地方团队迅速减员来造成以多打少，虽射程和伤害不及M24和AWM，但由于其数量大，成为了使用最多的狙击枪。")
+		          break;
+			  case 5:
+			      alert("M24\r\r 枪械讲解:\r M24作为一把空投产出狙击枪，威力巨大，虽不能一枪打坏三级头，但也能造成94.5的伤害，如果对方不是满血也会被击杀。\r\r枪械特点:\r很多人问他与98K相比有什么优点，不是都只能打爆二级头吗，M24拥有更大的威力，更快速的弹道以及更远的射程，同时它可以加装快速/扩容弹夹，在换弹和备弹数方面也有很大优势。")
+		          break;
+			  case 6:
+			      alert("AWM\r\r 枪械讲解:\r 无比强大。AWM是游戏中仅有的一把可以一击致命3级头盔的枪。\r\r枪械特点:\r通过其卓越的射程，在合适的人手中它是一把对抗装备齐全敌人时无敌的武器。你只能在空投箱中发现这把武器，同时还有目前仅可供其使用的.300马格南(7.62×67 mm)子弹。")
+		          break;
+				  
+		   }
+		
+		},
+		SubmachineGreet:function(index){
+		   switch(index){
+		      case 0:
+			      alert("汤姆逊\r\r 枪械讲解:\r仅出产于空投物资的冲锋枪，使用.45子弹，容弹量100发无法扩容，可加装枪口，汤姆逊并不常见，在空投中看到它也往往是失望之情。\r\r枪械特性:\r优点：不错的射速。而且消音VSS比一般的步枪消音声音更轻，杀人于无形的利器。\r单发38点的伤害，同时拥有非常高的射速，让这把武器秒人的速度非常快，并且超大的弹匣容量让你不用担心打到一半要换子弹这个问题。作为一把近战武器，虽然伤害没有到霰弹枪那种几乎一击必杀的威力，但是实际上也没差太多，毕竟单发伤害和射速摆在那里，而且霰弹枪打中距离的人比较无力，但是汤姆逊还是打得到的。这把武器的大弹匣让它非常适合用来压制，长时间不用换子弹可以更长时间的保持威慑力，架枪的时候对于准头不是特别够的玩家还是非常不错的。");
+				  break;
+		      case 1:
+			      alert("UMP9\r\r 枪械讲解:\rUMP9就游戏中的一把冲锋枪，在地图中刷新几率比较高，几乎是每局都能看到的一把枪。\r\r枪械特性:\rUMP9俗称车王，有三种射击模式，全自动模式下射速快且稳定性强，易于掌控，非常适合中近距离搏杀。瞄准目标后，配合简单的压枪泼水，你会发现敌人很快就会倒在你的“突突突”下。");
+				  break;
+			  case 2:
+			      alert("UZI\r\r 枪械讲解:\r这把枪在清理建筑中的敌人上极其出色，在合理使用时可以像霰弹枪一样有用。\r\r极快的射速，但极其不精准。装备枪托后Uzi可以变得更为稳定，但它在射击任意超过15-20米的事物上仍然很糟糕。")
+		          break; 
+		   }
+		}
+		
+	  }
+	})
+   
+   </script>
+  </body>
+</html>
