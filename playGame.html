@@ -220,7 +220,14 @@
 						</li>
 					  </ul>
 				   </div>
-				   <div v-show="index === 3">枪械3</div>
+				   <div v-show="index === 3" class="firearms-content">
+				      <ul>
+					    <li v-for="(pistol, index) in pistols" :key="pistol">
+						  <a href="javascript:;"><img v-bind:src="pistol.src" @click="pistolGreet(index)"></a>
+						  <span class="title">{{ pistol.title }}</span>
+						</li>
+					  </ul>
+				   </div>
 				   <div v-show="index === 4">枪械4</div>
 				   <div v-show="index === 5">枪械5</div>
 				</div>
@@ -458,7 +465,27 @@
 			title:"UZI"
 		  }
 
+		],
+		pistols:[
+		  {
+		    src:"imgs/r1895.jpg",
+			title:"R1895" 
+		  },
+		  {
+		    src:"imgs/p1911.jpg",
+			title:"P1911" 
+		  },
+		  {
+		    src:"imgs/p92.jpg",
+			title:"P92"
+		  },
+		   {
+		    src:"imgs/p18c.jpg",
+			title:"p18c"
+		  }
+
 		]
+		
 	  },
 	  
 	  methods:{
@@ -527,7 +554,25 @@
 			      alert("UZI\r\r 枪械讲解:\r这把枪在清理建筑中的敌人上极其出色，在合理使用时可以像霰弹枪一样有用。\r\r极快的射速，但极其不精准。装备枪托后Uzi可以变得更为稳定，但它在射击任意超过15-20米的事物上仍然很糟糕。")
 		          break; 
 		   }
+		},
+		pistolGreet:function(index){
+		   switch(index){
+		      case 0:
+			      alert("R1895\r\r 枪械讲解:\r唯一的看点就是能不能找到一枪爆头的机会，其余情况下适用性差于P92和1911。。\r\r枪械特性:\r个人比较推荐的一把枪，最大的优点在于爆头一枪死，堪比98K。意味着什么?这是这个游戏里比所有步枪伤害都高的一把枪之一，几乎碾压其他枪支。缺点对很多人乏力，子弹上速慢。但攻击很远，伤害很高，有消音器的情况下建议保留这把枪，阴人和远距离对射有奇效。");
+				  break;
+		      case 1:
+			      alert("P1911\r\r 枪械讲解:\r常见的手枪之二，刷新率高。相较于P92，P1911的威力略有提升，命中头部，2枪就可以打倒敌人。\r\r枪械特性:\r和92的样子没什么差距，但是有白颜色的，射速是左轮的四倍，爆头两枪，身子三枪。没什么特点，比较中庸的枪。");
+				  break;
+			  case 2:
+			      alert("P92\r\r 枪械讲解:\r最常见的手枪之一，几乎每个屋子里都有至少一把，在游戏中，除了刚落地时的狗斗，几乎没有其他地位。\r\r枪械特性\r伤害贼低，数据伤害29，意味着就算全部命中，也需要四枪才能解决一个人，唯一的优点是装弹数量多，十五发子弹。可用于菜鸡互啄环节，贴脸开枪都打不到人，你最起码还能多开几枪，只要遇到枪法稳一点的，这个枪是最弱的一个，射速最慢，伤害最低。")
+		          break; 
+			  case 3:
+				  alert("p18c\r\r 枪械讲解:\r能够切换全自动射击模式，搭配上红点，手枪也有一定的地位了。\r\r枪械特性\r优点：全自动的手枪，近距离面对步枪也有一战之力。缺点：威力小，远距离会被点出翔。")
+				  break; 
+		   }
+		
 		}
+		
 		
 	  }
 	})

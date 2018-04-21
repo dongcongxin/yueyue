@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 */
+
+body{
+	margin:0; 
+	padding:0; 
+	text-align:center; 
+	font-family:arial, sans-serif; 
+	font-size:12px;
+	background-color:#E0EFF6;}
+ul,li{
+	padding:0px;
+	margin:0px;
+	list-style:none; }
+a{
+	text-decoration:none;
+	color:#000;
+	font-family:"微软雅黑";
+	font-size:14px;
+}
+p{
+	padding:0; 
+	margin:0; line-height:1.5em}
+#wrap{
+	text-align:left;
+	width:900px;
+	background-image: url(../images/bj.png);
+	_background-image: url(../images/bj.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height:auto;
+	margin:0 auto;
+	}
+#menu{
+	float:left; 
+	width:199px; 
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background:url(../images/shuxian.jpg) no-repeat right center;
+	background-color:#E0EFF6;}
+#menu ul{
+}
+#menu li{
+	height:30px; 
+	line-height:30px; 
+	/*background:url(../images/shuxian.jpg) no-repeat right center;*/
+	text-align:right}
+#menu a{color:#333;
+font-size:10pt;
+text-decoration:none; 
+display:block; 
+padding-right:25px}
+#menu a:hover,#menu .on a{
+	color:#007734;
+	height:30px;
+	line-height:30px;
+	background-image: url(../images/hover.png);
+	_background-image: url(../images/hover.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-weight: bold;
+}
+#content{
+	float:left;
+	width:70%;
+	position:fixed;
+	margin-left:237px;}
+#content h1{
+	font-size:16px; 
+	font-weight:normal; 
+	margin:0; 
+	padding:0; 
+	margin-bottom:8px}
+#content ul{
+	list-style:none; 
+	margin:0; 
+	padding:0}
+#content li{padding:3px}
+#copy{clear:both}
+
