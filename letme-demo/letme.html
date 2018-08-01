@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Letme在线编辑器预览</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/jquery.js"></script>
+</head>
+<body>
+	<div class="head-title">
+		<p>css style样式的实时编辑与效果显示实例页面</p>
+	</div>
+	<div class="main">
+		<div class="code part">
+			<!--HTML-->
+			<div class="input-code">
+				<h3>html</h3>
+				<pre id="demo2"><textarea class="textarea" id="code" name="code"></textarea></pre><br>
+				<input type="button" value="Run" class="btn">
+			</div>
+
+			<!--JavaScript-->
+			<div class="input-code js-code">
+				<h3>JavaScript</h3>
+				<textarea  class="textarea js" id="js" name="js"></textarea><br>
+				<input type="button" value="Run" class="btn btn-js">
+			</div>
+		</div>
+		<div class="effect part">
+			<!--CSS-->
+			<h3>css</h3>
+			<div class="show p20">
+				<style contenteditable>.example{padding: 5px; background-color: #fff;}</style>
+			</div>
+			<!--view-->
+			<h3>效果:</h3>
+			<div class="show p5">
+				<div class="example">测试用例</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	<script>
+	</script>
+</body>
+</html>
