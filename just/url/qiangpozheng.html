@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>强迫症配图</title>
+	<script src="../js/jquery.min.js"></script>
+	<style type="text/css">
+	  .thumbnail {
+	  	margin-right: 2px;
+	  	float: left;
+	  }
+    </style>
+</head>
+<body>
+<div class="row">
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng01.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+       <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng02.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+      <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng03.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+      <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng04.png" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+       <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng05.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+       <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng06.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+       <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng07.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+       <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng08.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+       <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng09.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+       <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/qiangpozheng10.jpg" alt="强迫症配图" width="210" height="200">
+	    </a>
+      </div>
+</div>
+
+<script>
+	$(".thumbnail img").click(function() {
+		confirm("选择右键-->图片另存为-->保存到桌面")
+	})
+	$(document).attr("title", "强迫症配图目前有:" + $(".thumbnail img").length + "张");
+</script>
+</body>
+</html>
