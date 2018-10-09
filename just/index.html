@@ -162,6 +162,28 @@
 		   $(this).append("<span class='label label-warning'>已点击</span>");
 		   $(this).unbind("click");
 		})
+		 
+		 // 记录被点击的次数
+		 var count = 0;
+		 $(document).bind("contextmenu",function(e){
+		     count++;
+			 
+			 switch(count) {
+			    case 1:
+				   confirm("检测到您的鼠标右键坏了,请维修或更换");
+				   break;
+				case 2:
+				   confirm("好吧开个玩笑!你的右键已经不能在点击了");
+				   break;
+				case 3:
+				   confirm("大猪蹄子!叫你别点击了!");
+				   break;
+				default:
+				   return false;
+			 }
+             return false;
+         });
+
     });
 </script>
 </body>
