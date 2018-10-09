@@ -11,7 +11,7 @@
 	<style type="text/css">
 	a:hover{text-decoration: none; color:red}
 	a:link{text-decoration: none;}
-	a:visited{text-decoration: none}
+	a:visited{text-decoration: none;}
 	a:hover{text-decoration: none;}
 	a:active{text-decoration: none}
 	.dataTables_filter{margin-top:10px;}
@@ -156,6 +156,11 @@
         		     }
         	}
         });
+		
+		// 被点击过的链接显示被点击后的文字提示
+		$("#myTable td a").click(function(){
+		   $(this).append("<span class='label label-warning'>已点击</span>")
+		})
     });
 </script>
 </body>
