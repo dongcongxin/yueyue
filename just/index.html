@@ -159,7 +159,8 @@
 		
 		// 被点击过的链接显示被点击后的文字提示
 		$("#myTable td a").click(function(){
-		   $(this).append("<span class='label label-warning'>已点击</span>")
+		   $(this).append("<span class='label label-warning'>已点击</span>");
+		   $(this).unbind("click");
 		})
     });
 </script>
