@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>失眠配图</title>
+	<script src="../js/jquery.min.js"></script>
+	<style type="text/css">
+	  .thumbnail {
+	  	margin-right: 2px;
+	  	float: left;
+	  }
+    </style>
+</head>
+<body>
+<div class="row">
+	  <div class="col-xs-6 col-md-3">
+	    <a href="#" class="thumbnail">
+	      <img src="../imgs/shejiaokongjuzheng01.jpg" width="210" height="200">
+	    </a>
+      </div>
+</div>
+
+<script>
+	$(".thumbnail img").click(function() {
+		confirm("选择右键-->图片另存为-->保存到桌面")
+	})
+	$(document).attr("title", "社交恐惧症配图目前有:" + $(".thumbnail img").length + "张");
+</script>
+</body>
+</html>
