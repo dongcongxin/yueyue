@@ -17,59 +17,25 @@
 	    <a href="#" class="thumbnail">
 	      <img src="../imgs/zaokuangzheng01.jpg" alt="躁狂症配图" width="210" height="200">
 	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng02.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng03.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng04.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng05.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng06.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng07.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng08.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng09.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/zaokuangzheng10.jpg" alt="躁狂症配图" width="210" height="200">
-	    </a>
-      </div>
 </div>
 
+<script src="../js/common.js"></script>
 <script>
-	$(".thumbnail img").click(function() {
-		confirm("选择右键-->图片另存为-->保存到桌面")
-	})
-	$(document).attr("title", "躁狂症配图目前有:" + $(".thumbnail img").length + "张");
+	var imgs = [
+          "../imgs/zaokuangzheng01.jpg",
+          "../imgs/zaokuangzheng02.jpg",
+          "../imgs/zaokuangzheng03.jpg",
+          "../imgs/zaokuangzheng04.jpg",
+          "../imgs/zaokuangzheng05.jpg",
+          "../imgs/zaokuangzheng06.jpg",
+          "../imgs/zaokuangzheng07.jpg",
+          "../imgs/zaokuangzheng08.jpg",
+          "../imgs/zaokuangzheng09.jpg",
+          "../imgs/zaokuangzheng10.jpg",
+	];
+
+	showImgs(imgs, $(".thumbnail"))
+	imgLen("躁狂症");
 </script>
 </body>
 </html>

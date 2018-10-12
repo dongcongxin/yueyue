@@ -15,36 +15,22 @@
 <div class="row">
 	  <div class="col-xs-6 col-md-3">
 	    <a href="#" class="thumbnail">
-	      <img src="../imgs/yiyuzheng01.jpg" alt="抑郁症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/yiyuzheng02.jpg" alt="抑郁症配图" width="210" height="200">
-	    </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/yiyuzheng03.jpg" alt="抑郁症配图" width="210" height="200">
-	    </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/yiyuzheng04.jpg" alt="抑郁症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/yiyuzheng05.jpg" alt="抑郁症配图" width="210" height="200">
 	    </a>
       </div>
 </div>
 
+<script src="../js/common.js"></script>
 <script>
-	$(".thumbnail img").click(function() {
-		confirm("选择右键-->图片另存为-->保存到桌面")
-	})
-	$(document).attr("title", "抑郁症配图目前有:" + $(".thumbnail img").length + "张");
+	var imgs = [
+          "../imgs/yiyuzheng01.jpg",
+          "../imgs/yiyuzheng02.jpg",
+          "../imgs/yiyuzheng03.jpg",
+          "../imgs/yiyuzheng04.jpg",
+          "../imgs/yiyuzheng05.jpg"
+	];
+
+	showImgs(imgs, $(".thumbnail"))
+	imgLen("抑郁症");
 </script>
 </body>
 </html>

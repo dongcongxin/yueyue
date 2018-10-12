@@ -15,61 +15,26 @@
 <div class="row">
 	  <div class="col-xs-6 col-md-3">
 	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv01.jpg" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv02.jpg" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv03.jpg" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv04.jpg" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv05.png" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv06.png" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv07.png" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv08.png" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv09.png" alt="焦虑症配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/jiaolv10.png" alt="焦虑症配图" width="210" height="200">
 	    </a>
       </div>
 </div>
-
+<script src="../js/common.js"></script>
 <script>
-	$(".thumbnail img").click(function() {
-		confirm("选择右键-->图片另存为-->保存到桌面")
-	})
-	$(document).attr("title", "焦虑症配图目前有:" + $(".thumbnail img").length + "张");
+	var imgs = [
+          "../imgs/jiaolv01.jpg",
+          "../imgs/jiaolv02.jpg",
+          "../imgs/jiaolv03.jpg",
+          "../imgs/jiaolv04.jpg",
+          "../imgs/jiaolv05.png",
+          "../imgs/jiaolv06.png",
+          "../imgs/jiaolv07.png",
+          "../imgs/jiaolv08.png",
+          "../imgs/jiaolv09.png",
+          "../imgs/jiaolv10.png"
+	];
+
+	showImgs(imgs, $(".thumbnail"))
+	imgLen("焦虑症");
 </script>
 </body>
 </html>

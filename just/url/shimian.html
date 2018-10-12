@@ -15,61 +15,27 @@
 <div class="row">
 	  <div class="col-xs-6 col-md-3">
 	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian01.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian02.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian03.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian04.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian05.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian06.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian07.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian08.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian09.jpg" alt="失眠配图" width="210" height="200">
-	    </a>
-      </div>
-       <div class="col-xs-6 col-md-3">
-	    <a href="#" class="thumbnail">
-	      <img src="../imgs/shimian10.jpg" alt="失眠配图" width="210" height="200">
 	    </a>
       </div>
 </div>
 
+<script src="../js/common.js"></script>
 <script>
-	$(".thumbnail img").click(function() {
-		confirm("选择右键-->图片另存为-->保存到桌面")
-	})
-	$(document).attr("title", "失眠配图目前有:" + $(".thumbnail img").length + "张");
+	var imgs = [
+          "../imgs/shimian01.jpg",
+          "../imgs/shimian02.jpg",
+          "../imgs/shimian03.jpg",
+          "../imgs/shimian04.jpg",
+          "../imgs/shimian05.jpg",
+          "../imgs/shimian06.jpg",
+          "../imgs/shimian07.jpg",
+          "../imgs/shimian08.jpg",
+          "../imgs/shimian09.jpg",
+          "../imgs/shimian10.jpg",
+	];
+
+	showImgs(imgs, $(".thumbnail"))
+	imgLen("失眠");
 </script>
 </body>
 </html>
